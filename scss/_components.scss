@@ -1,0 +1,70 @@
+.section {
+  height: 70rem;
+  padding: 0 3rem;
+  display: grid;
+}
+.card {
+  width: 70rem;
+  padding: 2rem;
+  display: grid;
+  color: $bg-color-white;
+}
+.grid-one {
+  grid-template:
+    "a b" 0.6fr
+    "c d" 1fr
+    "e f" 1fr
+    / 1fr 1fr;
+}
+
+.grid-two {
+  grid-template:
+    "a b" 0.6fr
+    "c d" 1fr
+    "e f" 1fr
+    / 1fr 1fr;
+}
+
+.grid-three {
+  grid-template:
+    "a b" 0.6fr
+    "c d" 1fr
+    "e f" 1fr
+    / 1fr 1fr;
+}
+.grid-four {
+  grid-template:
+    " . a . " 0.4fr
+    " . b . " 1fr
+    " . c . " 0.35fr
+    / 100px 1fr 100px;
+}
+.grid-five {
+  grid-template:
+    " . a . " 0.2fr
+    " . b . " 1fr
+    " . c . " 0.2fr
+    / 100px 1fr 100px;
+}
+
+// BUTTONS
+
+.submit button {
+  text-align: left;
+  font-family: $button-font;
+  color: $primary-color;
+  border: 1px solid $bg-color-black;
+  border-radius: 1rem;
+  background: white;
+  font-size: 1.2rem;
+  height: 4rem;
+  width: 6rem;
+  padding: 1.2rem;
+}
+.submit button:hover{
+  width: 100%;
+  transition: all 0.2s;
+  border: 2px solid black;
+  border-left: 10px solid black;
+  border-radius: 5rem 5rem 5rem 5rem;
+}
