@@ -13,7 +13,13 @@ body::-webkit-scrollbar {
 // HEADER
 header {
   height: 100vh;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 99%), url(../img/abstract002.jpg) center /cover no-repeat; 
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 5%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1) 99%
+    ),
+    url(../img/abstract002.jpg) center / cover no-repeat;
 }
 .welcome-section {
   height: 100%;
@@ -73,7 +79,7 @@ h2 {
   grid-template:
     " . heading . " 100px
     " bio bio bio " 1fr
-    " . cv cv " 50px
+    " . about-btn . " 120px
     / 1fr 1fr 1fr;
   gap: 0.5rem;
 
@@ -84,37 +90,35 @@ h2 {
   .biography {
     grid-area: bio;
     .img-box {
-      width: 200px;
-      height: 200px;
+      width: 15rem;
+      height: 15rem;
       float: right;
       grid-area: bio;
-      margin: 1rem;
+      margin: 2rem;
       object-fit: cover;
       border: 2px solid $bg-color-red;
-      border-radius: 1rem;
+      border-radius: 2rem;
       img {
         float: right;
         width: 100%;
-        border-radius: 1rem;
+        border-radius: 1.9rem;
       }
     }
     p {
       text-align: right;
       line-height: 2.4rem;
       font-size: 1.2rem;
+      letter-spacing: 2px;
     }
   }
-  .cv {
-    grid-area: cv;
-  }
 }
-.user {
+.filler {
   grid-area: d;
 }
 // SKILLS
 .skills-section {
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
-background:  url(../img/abstract003.jpg);
+  background: url(../img/abstract003.jpg);
 }
 .skills-grid {
   grid-area: d;
@@ -129,7 +133,6 @@ background:  url(../img/abstract003.jpg);
   h2 {
     text-align: center;
     grid-area: heading;
-
   }
   .logo-box {
     justify-self: center;
@@ -139,13 +142,14 @@ background:  url(../img/abstract003.jpg);
       width: 100%;
       padding: 1.5rem;
       border-radius: 2rem;
-      border: 1px solid transparent;
-      background: $bg-color-gray;
+      border: 1px solid $bg-color-red;
+      background: $bg-color-white;
       transition: all 0.6s;
     }
     img:hover {
-      border: 1px solid $bg-color-black;
-      background: $bg-color-white;
+      background: $pure-white;
+      border: 1px solid transparent;
+      box-shadow: 1px 1px 50px 12px rgba(255,255,255,0.25); 
     }
   }
   .logo-a {
@@ -309,7 +313,7 @@ background:  url(../img/abstract003.jpg);
 }
 // CONTACT
 .contact-section {
-  background:  url(../img/abstract004.jpg);
+  background: url(../img/abstract004.jpg);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   h2 {
     grid-area: a;
@@ -377,11 +381,7 @@ background:  url(../img/abstract003.jpg);
     font-size: 1.5em;
     color: $pure-white;
   }
-  /*     input::placeholder {
-    padding: 0.5rem;
-    font-size: 1.5em;
-  } */
-  
+
   label span {
     color: $span-color;
     font-size: 1.3rem;
