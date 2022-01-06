@@ -9,6 +9,13 @@
   display: grid;
   color: $bg-color-white;
 }
+.filler {
+  font-size: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+}
 .grid-one {
   grid-template:
     "a b" 0.6fr
@@ -22,7 +29,7 @@
     "a b" 0.6fr
     "c d" 1fr
     "e f" 1fr
-    / 1fr 1fr;
+    / 0.5fr 1fr;
 }
 
 .grid-three {
@@ -35,15 +42,15 @@
 .grid-four {
   grid-template:
     " . a . " 0.4fr
-    " . b . " 1fr
-    " . c . " 0.35fr
+    " . b . " 0.8fr
+    " . c . " 0.4fr
     / 100px 1fr 100px;
 }
 .grid-five {
   grid-template:
-    " . a . " 0.2fr
+    " . a . " 0.3fr
     " . b . " 1fr
-    " . c . " 0.2fr
+    " . c . " 0.1fr
     / 100px 1fr 100px;
 }
 
@@ -52,19 +59,19 @@
 .submit button {
   text-align: left;
   font-family: $button-font;
-  color: $primary-color;
-  border: 1px solid $bg-color-black;
+  background: $bg-color-white;
+  border: 2px solid $pure-white;
   border-radius: 1rem;
-  background: white;
   font-size: 1.2rem;
   height: 4rem;
   width: 6rem;
   padding: 1.2rem;
+  transition: background-color 0.6s;
 }
 .submit button:hover{
-  width: 100%;
-  transition: all 0.2s;
-  border: 2px solid black;
-  border-left: 10px solid black;
-  border-radius: 5rem 5rem 5rem 5rem;
+background-color: $bg-color-red;
+border-color: $bg-color-white;
+}
+.submit button:active {
+  transform: scale(1.1);
 }

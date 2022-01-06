@@ -5,23 +5,22 @@
 }
 body {
   font-family: $body-font;
+  background-color: $bg-color-red;
 }
 body::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 // HEADER
 header {
-  height: 900px;
-  background: linear-gradient(rgba(0, 0, 0, 0.254) 90%, black),
-    url("../img/workspace-g4b9ca269b_1920.jpg") no-repeat;
-  background-position: 0% 25%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 99%), url(../img/abstract002.jpg) center /cover no-repeat; 
 }
 .welcome-section {
   height: 100%;
 }
 .welcome {
   color: $bg-color-white;
-  width: 850px;
+  width: 900px;
   position: relative;
   top: 40%;
   left: 50%;
@@ -56,8 +55,12 @@ header {
 }
 
 // MAIN
+main {
+  color: $bg-color-white;
+}
 h2 {
   font-size: 2.5rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 // ABOUT
@@ -68,7 +71,7 @@ h2 {
 .about-grid {
   grid-area: c;
   grid-template:
-    " . heading . " 50px
+    " . heading . " 100px
     " bio bio bio " 1fr
     " . cv cv " 50px
     / 1fr 1fr 1fr;
@@ -87,6 +90,8 @@ h2 {
       grid-area: bio;
       margin: 1rem;
       object-fit: cover;
+      border: 2px solid $bg-color-red;
+      border-radius: 1rem;
       img {
         float: right;
         width: 100%;
@@ -103,25 +108,28 @@ h2 {
     grid-area: cv;
   }
 }
+.user {
+  grid-area: d;
+}
 // SKILLS
 .skills-section {
-  background: $bg-color-red;
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+background:  url(../img/abstract003.jpg);
 }
 .skills-grid {
   grid-area: d;
   grid-template:
-    " . . heading heading . . " 50px
-    " a a b b c c " 0.6fr
+    " . . heading heading . . " 100px
+    " a a b b c c " 1fr
     " d d e e f f " 1fr
-    " . g g h h . " 0.8fr
+    " . g g h h . " 1fr
     / 1fr 1fr 1fr 1fr 1fr 1fr;
   row-gap: 2rem;
 
   h2 {
     text-align: center;
     grid-area: heading;
-    color: $primary-color;
+
   }
   .logo-box {
     justify-self: center;
@@ -142,7 +150,7 @@ h2 {
   }
   .logo-a {
     grid-area: a;
-    width: 190px;
+    width: 160px;
   }
   .logo-b {
     grid-area: b;
@@ -150,7 +158,7 @@ h2 {
   }
   .logo-c {
     grid-area: c;
-    width: 240px;
+    width: 220px;
   }
   .logo-d {
     grid-area: d;
@@ -170,8 +178,11 @@ h2 {
   }
   .logo-h {
     grid-area: h;
-    width: 160px;
+    width: 140px;
   }
+}
+.brain {
+  grid-area: c;
 }
 // PROJECTS
 .projects-section {
@@ -181,7 +192,7 @@ h2 {
     grid-area: a;
     align-self: center;
     justify-self: center;
-    color: $bg-color-white;
+
     margin-top: 5rem;
   }
   .projects-grid {
@@ -257,7 +268,8 @@ h2 {
       grid-area: d;
       width: 100%;
       position: relative;
-      background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center / cover;
+      background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg")
+        center / cover;
     }
     .box4:hover::after {
       background-color: rgba(255, 255, 0, 0.261);
@@ -276,7 +288,8 @@ h2 {
       width: 100%;
       border-radius: 0 0 12rem 0;
       position: relative;
-      background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center / cover;
+      background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg")
+        center / cover;
     }
     .box5:hover::after {
       background-color: rgba(0, 128, 0, 0.2);
@@ -294,102 +307,101 @@ h2 {
     }
   }
 }
-  // CONTACT
-  .contact-section {
-    background: $bg-color-red;
-
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-    h2 {
-      grid-area: a;
-      align-self: flex-end;
-      justify-self: center;
-      color: $primary-color;
-      margin-top: 5rem;
-    }
-  }
-  .form-grid {
-    grid-area: b;
-    display: grid;
-    width: 80%;
+// CONTACT
+.contact-section {
+  background:  url(../img/abstract004.jpg);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  h2 {
+    grid-area: a;
+    align-self: flex-end;
     justify-self: center;
-    grid-template:
-      " . . . " 0.1fr
-      " name mail subject" 80px
-      " text text text " 0.7fr
-      " submit submit submit" 50px
-      / 1fr 1fr 1fr;
-    .message {
-      height: 100%;
-    }
-    .name {
-      grid-area: name;
-    }
-    .email {
-      grid-area: mail;
-    }
-    .subject {
-      grid-area: subject;
-    }
-    .message {
-      grid-area: text;
-    }
-    .submit {
-      grid-area: submit;
-    }
-    .info {
-      align-self: center;
-      position: relative;
-      color: $input-color;
-    }
-    .info:hover label {
-      bottom: 120%;
-    }
-    label {
-      position: absolute;
-      bottom: 85%;
-      left: 3%;
-      font-size: 1.2em;
-      transition: all 1s;
-    }
-
-    input {
-      width: 90%;
-      background: none;
-      border-width: 0;
-      border-bottom: 1px solid $input-color;
-      color: $primary-color;
-      outline: none;
-    }
-    .subject input {
-      width: 100%;
-    }
-    input[placeholder] {
-      padding: 0.5rem;
-      font-size: 1.5em;
-    }
-/*     input::placeholder {
-      padding: 0.5rem;
-      font-size: 1.5em;
-    } */
-
-    label span {
-      color: $span-color;
-      font-size: 1rem;
-    }
-    textarea {
-      width: 100%;
-      height: 85%;
-      margin-top: 2rem;
-      resize: none;
-      border: 1px solid $input-color;
-    }
-    textarea[placeholder] {
-      font-size: 1.8em;
-      padding: 0.5rem;
-    }
+    margin-bottom: 2rem;
   }
-  // FOOTER
-  footer {
-    height: 4rem;
-    background: $bg-color-black;
+}
+.form-grid {
+  grid-area: b;
+  display: grid;
+  width: 80%;
+  justify-self: center;
+  grid-template:
+    " . . . " 0.1fr
+    " name mail subject" 80px
+    " text text text " 0.7fr
+    " submit submit submit" 50px
+    / 1fr 1fr 1fr;
+  .message {
+    height: 100%;
   }
+  .name {
+    grid-area: name;
+  }
+  .email {
+    grid-area: mail;
+  }
+  .subject {
+    grid-area: subject;
+  }
+  .message {
+    grid-area: text;
+  }
+  .submit {
+    grid-area: submit;
+  }
+  .info {
+    align-self: center;
+    position: relative;
+  }
+  .info:hover label {
+    bottom: 120%;
+  }
+  label {
+    position: absolute;
+    bottom: 85%;
+    left: 3%;
+    font-size: 1.2em;
+    transition: all 1s;
+  }
+
+  input {
+    width: 90%;
+    background: none;
+    border-width: 0;
+    border-bottom: 1px solid $bg-color-white;
+    outline: none;
+  }
+  .subject input {
+    width: 100%;
+  }
+  input[placeholder] {
+    padding: 0.5rem;
+    font-size: 1.5em;
+    color: $pure-white;
+  }
+  /*     input::placeholder {
+    padding: 0.5rem;
+    font-size: 1.5em;
+  } */
+  
+  label span {
+    color: $span-color;
+    font-size: 1.3rem;
+  }
+  textarea {
+    width: 100%;
+    height: 85%;
+    margin-top: 2rem;
+    resize: none;
+    outline: none;
+  }
+  textarea[placeholder] {
+    font-size: 1.8em;
+    padding: 0.5rem;
+    background-color: $bg-color-white;
+  }
+}
+// FOOTER
+footer {
+  height: 4rem;
+  background: $bg-color-black;
+  border-top: 2px solid $bg-color-red;
+}

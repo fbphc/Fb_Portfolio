@@ -1,4 +1,4 @@
-animationText(['Fabio Petrella', 'a Web Developer', 'saying something'], 'text',['rgb(248, 41, 5)']);
+animationText(['Fabio Petrella', 'a Web Developer', 'saying something'], 'text',['black']);
 
 function animationText(words, id, color) {
   let visible = true;
