@@ -6,7 +6,7 @@
   background-color: $bg-color-black;
   .logo {
     width: 80px;
-    background: yellow;
+    margin-top: 0.2rem;
     img {
       width: 100%;
       opacity: 0.8;
@@ -75,15 +75,13 @@
     bottom: 8px;
     right: 40px;
     font-family: "FontAwesome";
-    /* text-shadow: 2px 2px 2px #000000; */
   }
   li:nth-child(2) a:hover::after {
-    content: "\f4fe";
+    content: "\f029";
     position: relative;
     bottom: 8px;
     right: 40px;
     font-family: "FontAwesome";
-    /* text-shadow: 2px 2px 2px #000000; */
   }
   li:nth-child(3) a:hover::after {
     content: "\f5dc";
@@ -91,7 +89,6 @@
     bottom: 8px;
     right: 40px;
     font-family: "FontAwesome";
-    /* text-shadow: 2px 2px 2px #000000; */
   }
   li:nth-child(4) a:hover::after {
     content: "\f542";
@@ -99,7 +96,6 @@
     bottom: 8px;
     right: 40px;
     font-family: "FontAwesome";
-    /* text-shadow: 2px 2px 2px #000000; */
   }
   li:last-child a:hover::after {
     content: "\f0e0";

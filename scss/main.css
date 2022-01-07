@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-family: "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
   background-color: #ff6f00;
 }
 
@@ -133,8 +133,37 @@ h2 {
   letter-spacing: 2px;
 }
 
-.filler {
+.qr-code {
   grid-area: d;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.qr-code a {
+  width: 250px;
+  height: 250px;
+}
+
+.qr-code a img {
+  width: 100%;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.qr-code a img:hover {
+  opacity: 0.7;
 }
 
 .skills-section {
@@ -254,11 +283,11 @@ h2 {
   border-radius: 12rem 0 0 0;
   width: 100%;
   position: relative;
-  background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center/cover;
+  background: url("../img/04_burger.png") center/cover no-repeat;
 }
 
 .projects-section .projects-grid .box1:hover::after {
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.1);
   border-radius: 12rem 0 0 0;
 }
 
@@ -278,16 +307,16 @@ h2 {
   grid-area: b;
   width: 100%;
   position: relative;
-  background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center/cover;
+  background: url("../img/01_colorful.png") center/cover no-repeat;
 }
 
 .projects-section .projects-grid .box2:hover::after {
-  background-color: rgba(255, 182, 193, 0.282);
+  background-color: rgba(255, 182, 193, 0.1);
 }
 
 .projects-section .projects-grid .box2::after {
   content: "";
-  background-color: rgba(255, 182, 193, 0.6);
+  background-color: rgba(255, 154, 169, 0.6);
   display: block;
   position: absolute;
   height: 100%;
@@ -300,11 +329,11 @@ h2 {
   grid-area: c;
   width: 100%;
   position: relative;
-  background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center/cover;
+  background: url("../img/02_graph.png") center/cover no-repeat;
 }
 
 .projects-section .projects-grid .box3:hover::after {
-  background-color: rgba(255, 123, 0, 0.2);
+  background-color: rgba(255, 123, 0, 0.1);
 }
 
 .projects-section .projects-grid .box3::after {
@@ -322,11 +351,11 @@ h2 {
   grid-area: d;
   width: 100%;
   position: relative;
-  background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center/cover;
+  background: url("../img/03_travel.png") center/cover no-repeat;
 }
 
 .projects-section .projects-grid .box4:hover::after {
-  background-color: rgba(255, 255, 0, 0.261);
+  background-color: rgba(255, 255, 0, 0.1);
 }
 
 .projects-section .projects-grid .box4::after {
@@ -345,11 +374,11 @@ h2 {
   width: 100%;
   border-radius: 0 0 12rem 0;
   position: relative;
-  background: url("../img/14433049_10207226138916542_3714018530593715073_n.jpg") center/cover;
+  background: url("../img/05_game.png") center/cover no-repeat;
 }
 
 .projects-section .projects-grid .box5:hover::after {
-  background-color: rgba(0, 128, 0, 0.2);
+  background-color: rgba(0, 128, 0, 0.1);
   border-radius: 0 0 12rem 0;
 }
 
@@ -430,6 +459,7 @@ h2 {
   bottom: 85%;
   left: 3%;
   font-size: 1.2em;
+  letter-spacing: 0.2rem;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -452,6 +482,10 @@ h2 {
   color: white;
 }
 
+.form-grid input:focus {
+  border-color: #ff6f00;
+}
+
 .form-grid label span {
   color: #ff6f00;
   font-size: 1.3rem;
@@ -463,12 +497,18 @@ h2 {
   margin-top: 2rem;
   resize: none;
   outline: none;
+  border-radius: 0.3rem;
 }
 
 .form-grid textarea[placeholder] {
+  background-color: rgba(238, 238, 238, 0.782);
   font-size: 1.8em;
   padding: 0.5rem;
-  background-color: rgba(238, 238, 238, 0.782);
+}
+
+.form-grid textarea:focus {
+  -webkit-box-shadow: 0px 0px 10px 1px #ff6f00;
+          box-shadow: 0px 0px 10px 1px #ff6f00;
 }
 
 .form-grid .par-req {
@@ -476,15 +516,20 @@ h2 {
   justify-self: flex-end;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  background: black;
   margin-right: 0.8rem;
   margin-top: -1.4rem;
   padding: 0.4rem;
-  border-radius: 1rem;
-  /*     background: $bg-color-black; */
+  border-radius: 0.2rem;
 }
 
 .form-grid .par-req p {
   color: #ff6f00;
+}
+
+.form-grid .par-req p span {
+  -webkit-text-decoration: underline 1px solid #ff6f00;
+          text-decoration: underline 1px solid #ff6f00;
 }
 
 footer {
@@ -509,7 +554,7 @@ footer {
 
 .navbar .logo {
   width: 80px;
-  background: yellow;
+  margin-top: 0.2rem;
 }
 
 .navbar .logo img {
@@ -593,16 +638,14 @@ footer {
   bottom: 8px;
   right: 40px;
   font-family: "FontAwesome";
-  /* text-shadow: 2px 2px 2px #000000; */
 }
 
 .aside-nav li:nth-child(2) a:hover::after {
-  content: "\f4fe";
+  content: "\f029";
   position: relative;
   bottom: 8px;
   right: 40px;
   font-family: "FontAwesome";
-  /* text-shadow: 2px 2px 2px #000000; */
 }
 
 .aside-nav li:nth-child(3) a:hover::after {
@@ -611,7 +654,6 @@ footer {
   bottom: 8px;
   right: 40px;
   font-family: "FontAwesome";
-  /* text-shadow: 2px 2px 2px #000000; */
 }
 
 .aside-nav li:nth-child(4) a:hover::after {
@@ -620,7 +662,6 @@ footer {
   bottom: 8px;
   right: 40px;
   font-family: "FontAwesome";
-  /* text-shadow: 2px 2px 2px #000000; */
 }
 
 .aside-nav li:last-child a:hover::after {
