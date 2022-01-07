@@ -116,14 +116,14 @@ h2 {
   margin: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid #ff6f00;
+  border: 1px solid #ff6f00;
   border-radius: 2rem;
 }
 
 .about-grid .biography .img-box img {
   float: right;
   width: 100%;
-  border-radius: 1.9rem;
+  border-radius: 2rem;
 }
 
 .about-grid .biography p {
@@ -140,7 +140,7 @@ h2 {
 .skills-section {
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
           clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
-  background: url(../img/abstract003.jpg);
+  background: url(../img/abstract003.jpg) center/cover no-repeat;
 }
 
 .skills-grid {
@@ -366,7 +366,7 @@ h2 {
 }
 
 .contact-section {
-  background: url(../img/abstract004.jpg);
+  background: url(../img/abstract004.jpg) center/cover no-repeat;
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 }
@@ -387,7 +387,7 @@ h2 {
   width: 80%;
   -ms-grid-column-align: center;
       justify-self: center;
-  grid-template: " . . . " 0.1fr " name mail subject" 80px " text text text " 0.7fr " submit submit submit" 50px / 1fr 1fr 1fr;
+  grid-template: " . . . " 0.1fr " name mail subject" 80px " text text text " 0.6fr " submit submit required" 50px / 1fr 1fr 1fr;
 }
 
 .form-grid .message {
@@ -469,6 +469,22 @@ h2 {
   font-size: 1.8em;
   padding: 0.5rem;
   background-color: rgba(238, 238, 238, 0.782);
+}
+
+.form-grid .par-req {
+  grid-area: required;
+  justify-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-right: 0.8rem;
+  margin-top: -1.4rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  /*     background: $bg-color-black; */
+}
+
+.form-grid .par-req p {
+  color: #ff6f00;
 }
 
 footer {
@@ -571,8 +587,44 @@ footer {
           transform: scale(1.1);
 }
 
-.aside-nav a:hover::after {
+.aside-nav li:first-child a:hover::after {
+  content: "\f139";
+  position: relative;
+  bottom: 8px;
+  right: 40px;
+  font-family: "FontAwesome";
+  /* text-shadow: 2px 2px 2px #000000; */
+}
+
+.aside-nav li:nth-child(2) a:hover::after {
+  content: "\f4fe";
+  position: relative;
+  bottom: 8px;
+  right: 40px;
+  font-family: "FontAwesome";
+  /* text-shadow: 2px 2px 2px #000000; */
+}
+
+.aside-nav li:nth-child(3) a:hover::after {
   content: "\f5dc";
+  position: relative;
+  bottom: 8px;
+  right: 40px;
+  font-family: "FontAwesome";
+  /* text-shadow: 2px 2px 2px #000000; */
+}
+
+.aside-nav li:nth-child(4) a:hover::after {
+  content: "\f542";
+  position: relative;
+  bottom: 8px;
+  right: 40px;
+  font-family: "FontAwesome";
+  /* text-shadow: 2px 2px 2px #000000; */
+}
+
+.aside-nav li:last-child a:hover::after {
+  content: "\f0e0";
   position: relative;
   bottom: 8px;
   right: 40px;

@@ -96,12 +96,12 @@ h2 {
       grid-area: bio;
       margin: 2rem;
       object-fit: cover;
-      border: 2px solid $bg-color-red;
+      border: 1px solid $bg-color-red;
       border-radius: 2rem;
       img {
         float: right;
         width: 100%;
-        border-radius: 1.9rem;
+        border-radius: 2rem;
       }
     }
     p {
@@ -118,7 +118,7 @@ h2 {
 // SKILLS
 .skills-section {
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
-  background: url(../img/abstract003.jpg);
+  background: url(../img/abstract003.jpg) center / cover no-repeat;
 }
 .skills-grid {
   grid-area: d;
@@ -149,7 +149,7 @@ h2 {
     img:hover {
       background: $pure-white;
       border: 1px solid transparent;
-      box-shadow: 1px 1px 50px 12px rgba(255,255,255,0.25); 
+      box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
     }
   }
   .logo-a {
@@ -313,7 +313,7 @@ h2 {
 }
 // CONTACT
 .contact-section {
-  background: url(../img/abstract004.jpg);
+  background: url(../img/abstract004.jpg) center / cover no-repeat;
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   h2 {
     grid-area: a;
@@ -330,8 +330,8 @@ h2 {
   grid-template:
     " . . . " 0.1fr
     " name mail subject" 80px
-    " text text text " 0.7fr
-    " submit submit submit" 50px
+    " text text text " 0.6fr
+    " submit submit required" 50px
     / 1fr 1fr 1fr;
   .message {
     height: 100%;
@@ -397,6 +397,19 @@ h2 {
     font-size: 1.8em;
     padding: 0.5rem;
     background-color: $bg-color-white;
+  }
+  .par-req {
+    grid-area: required;
+    justify-self: flex-end;
+    align-self: flex-start;
+    margin-right: 0.8rem;
+    margin-top: -1.4rem;
+    padding: 0.4rem;
+    border-radius: 1rem;
+/*     background: $bg-color-black; */
+    p {
+      color: $bg-color-red;
+    }
   }
 }
 // FOOTER

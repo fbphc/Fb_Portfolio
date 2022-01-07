@@ -67,10 +67,42 @@
     transition: transform 0.2s;
   }
   a:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
   }
-  a:hover::after {
+  li:first-child a:hover::after {
+    content: "\f139";
+    position: relative;
+    bottom: 8px;
+    right: 40px;
+    font-family: "FontAwesome";
+    /* text-shadow: 2px 2px 2px #000000; */
+  }
+  li:nth-child(2) a:hover::after {
+    content: "\f4fe";
+    position: relative;
+    bottom: 8px;
+    right: 40px;
+    font-family: "FontAwesome";
+    /* text-shadow: 2px 2px 2px #000000; */
+  }
+  li:nth-child(3) a:hover::after {
     content: "\f5dc";
+    position: relative;
+    bottom: 8px;
+    right: 40px;
+    font-family: "FontAwesome";
+    /* text-shadow: 2px 2px 2px #000000; */
+  }
+  li:nth-child(4) a:hover::after {
+    content: "\f542";
+    position: relative;
+    bottom: 8px;
+    right: 40px;
+    font-family: "FontAwesome";
+    /* text-shadow: 2px 2px 2px #000000; */
+  }
+  li:last-child a:hover::after {
+    content: "\f0e0";
     position: relative;
     bottom: 8px;
     right: 40px;
@@ -84,7 +116,7 @@
   a:active::after {
     color: #ff70039a;
   }
-  
+
   a::after {
     color: white;
     transition: none;
