@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .topnav {
     display: none;
   }
@@ -12,6 +12,7 @@
     display: none;
   }
   .welcome {
+    top: 50%;
     h2 {
       font-size: 2.5rem;
     }
@@ -91,4 +92,8 @@
   .form-grid {
     width: 100%;
   }
+}
+
+@media (max-width: 480px){
+  
 }

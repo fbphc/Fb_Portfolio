@@ -907,7 +907,7 @@ footer .socials a:hover {
           transform: scale(1.1);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .topnav {
     display: none;
   }
@@ -919,6 +919,9 @@ footer .socials a:hover {
   }
   .aside-nav {
     display: none;
+  }
+  .welcome {
+    top: 50%;
   }
   .welcome h2 {
     font-size: 2.5rem;
