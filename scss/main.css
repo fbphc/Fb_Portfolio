@@ -112,29 +112,25 @@ h2 {
   grid-area: bio;
 }
 
-.about-grid .biography .img-box {
-  width: 15rem;
-  height: 15rem;
-  float: right;
-  grid-area: bio;
-  margin: 2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 1px solid #ff6f00;
-  border-radius: 2rem;
+.about-grid .biography .paragraph {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, black 75%), url(../img/14433049_10207226138916542_3714018530593715073_n.jpg) top/cover no-repeat;
 }
 
-.about-grid .biography .img-box img {
-  float: right;
-  width: 100%;
-  border-radius: 2rem;
-}
-
-.about-grid .biography p {
-  text-align: right;
+.about-grid .biography .paragraph p {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
   line-height: 2.4rem;
   font-size: 1.2rem;
   letter-spacing: 2px;
+}
+
+.about-grid .biography .line {
+  border: 2px solid #ff6f00;
+  border-radius: 2rem;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .qr-code {
@@ -722,7 +718,7 @@ footer {
 }
 
 .grid-one {
-  grid-template: "a b" 0.6fr "c d" 1fr "e f" 1fr / 1fr 1fr;
+  grid-template: "a b" 0.6fr "c d" 1fr "e f" 0.5fr / 1fr 1fr;
 }
 
 .grid-two {
