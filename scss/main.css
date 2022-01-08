@@ -69,6 +69,10 @@ header {
   grid-area: h2;
 }
 
+.welcome span:nth-child(2) {
+  text-shadow: -1px -1px 0 rgba(255, 111, 0, 0.7), 1px -1px 0 rgba(255, 111, 0, 0.7), -1px 1px 0 rgba(255, 111, 0, 0.7), 1px 1px 0 rgba(255, 111, 0, 0.7);
+}
+
 .welcome .animation {
   grid-area: h2;
   -ms-flex-item-align: center;
@@ -99,7 +103,7 @@ h2 {
 
 .about-grid {
   grid-area: c;
-  grid-template: " . heading . " 100px " bio bio bio " 1fr " . about-btn . " 120px / 1fr 1fr 1fr;
+  grid-template: " heading heading heading " 100px " bio bio bio " 1fr " . about-btn . " 120px / 1fr 1fr 1fr;
   gap: 0.5rem;
 }
 
@@ -133,37 +137,33 @@ h2 {
   width: 80%;
 }
 
-.qr-code {
+.git-link {
   grid-area: d;
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: auto auto;
 }
 
-.qr-code a {
-  width: 250px;
-  height: 250px;
+.git-link .scan {
+  width: 180px;
+  margin: 1.5rem auto;
 }
 
-.qr-code a img {
+.git-link .scan img {
   width: 100%;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.6s;
-  transition: opacity 0.6s;
 }
 
-.qr-code a img:hover {
+.git-link .qr-code {
+  width: 260px;
   opacity: 0.7;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.git-link .qr-code img {
+  width: 100%;
+}
+
+.git-link .qr-code:hover {
+  opacity: 1;
 }
 
 .skills-section {
@@ -174,7 +174,7 @@ h2 {
 
 .skills-grid {
   grid-area: d;
-  grid-template: " . . heading heading . . " 100px " a a b b c c " 1fr " d d e e f f " 1fr " . g g h h . " 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: " . heading heading heading heading . " 100px " a a b b c c " 1fr " d d e e f f " 1fr " . g g h h . " 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
   row-gap: 2rem;
 }
 
@@ -529,9 +529,33 @@ h2 {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 4rem;
   background: black;
+  color: rgba(238, 238, 238, 0.782);
   border-top: 2px solid #ff6f00;
+  font-size: 1.2rem;
+  padding: 2rem 1rem;
+}
+
+footer .socials a {
+  color: rgba(238, 238, 238, 0.782);
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+footer .socials a:hover {
+  color: #ff6f00;
 }
 
 .navbar {
@@ -744,6 +768,7 @@ footer {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  display: none;
 }
 
 .about-btn a {
@@ -778,6 +803,8 @@ footer {
 
 .submit button:active, .about-btn a:active {
   opacity: 0.8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -793,25 +820,9 @@ footer {
   .card {
     width: 100%;
     padding: 0;
-    display: -ms-grid;
-    display: grid;
-    color: rgba(238, 238, 238, 0.782);
-  }
-  .filler {
-    font-size: 14rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: -10;
   }
   .grid-one {
-    grid-template: "a b" 0.6fr "c d" 1fr "e f" 1fr / 1fr 1fr;
+    grid-template: "a" 0.6fr "c" 1fr "e" 1fr / 1fr;
   }
   .grid-two {
     grid-template: "b" 0.6fr "d" 1fr "f" 1fr /1fr;
@@ -824,6 +835,15 @@ footer {
   }
   .grid-five {
     grid-template: " a " 0.3fr " b " 1fr " c " 0.1fr / 1fr;
+  }
+  .about-grid .biography .paragraph p {
+    line-height: 1.8rem;
+  }
+  .about-btn {
+    display: block;
+  }
+  .git-link {
+    display: none;
   }
   .skills-grid {
     row-gap: 4rem;

@@ -10,22 +10,13 @@
   .card {
     width: 100%;
     padding: 0;
-    display: grid;
-    color: $bg-color-white;
-  }
-  .filler {
-    font-size: 14rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -10;
   }
   .grid-one {
     grid-template:
-      "a b" 0.6fr
-      "c d" 1fr
-      "e f" 1fr
-      / 1fr 1fr;
+      "a" 0.6fr
+      "c" 1fr
+      "e" 1fr
+      / 1fr;
   }
 
   .grid-two {
@@ -57,7 +48,15 @@
       " c " 0.1fr
       / 1fr;
   }
-
+.about-grid .biography .paragraph p{
+    line-height: 1.8rem;
+}
+  .about-btn {
+    display: block;
+  }
+  .git-link {
+    display: none;
+  }
   .skills-grid {
     row-gap: 4rem;
     .logo-box {

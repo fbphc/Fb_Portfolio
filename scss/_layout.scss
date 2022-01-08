@@ -52,6 +52,10 @@ header {
     font-size: 3.5em;
     grid-area: h2;
   }
+  span:nth-child(2) {
+    text-shadow: -1px -1px 0 $bg-color-red-light, 1px -1px 0 $bg-color-red-light,
+      -1px 1px 0 $bg-color-red-light, 1px 1px 0 $bg-color-red-light;
+  }
   .animation {
     grid-area: h2;
     align-self: center;
@@ -80,7 +84,7 @@ h2 {
 .about-grid {
   grid-area: c;
   grid-template:
-    " . heading . " 100px
+    " heading heading heading " 100px
     " bio bio bio " 1fr
     " . about-btn . " 120px
     / 1fr 1fr 1fr;
@@ -93,7 +97,13 @@ h2 {
   .biography {
     grid-area: bio;
     .paragraph {
-      background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%), url(../img/14433049_10207226138916542_3714018530593715073_n.jpg) top / cover no-repeat;
+      background: radial-gradient(
+          circle,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 1) 75%
+        ),
+        url(../img/14433049_10207226138916542_3714018530593715073_n.jpg) top /
+          cover no-repeat;
       p {
         background: rgba(0, 0, 0, 0.5);
         padding: 1rem;
@@ -104,7 +114,7 @@ h2 {
         letter-spacing: 2px;
       }
     }
-    .line{
+    .line {
       border: 2px solid $bg-color-red;
       border-radius: 2rem;
       margin: 0 auto;
@@ -112,24 +122,28 @@ h2 {
     }
   }
 }
-.qr-code {
+.git-link {
   grid-area: d;
-  justify-self: center;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  a {
-    width: 250px;
-    height: 250px;
+  margin: auto auto;
+
+  .scan {
+    width: 180px;
+    margin: 1.5rem auto;
+
     img {
       width: 100%;
-      opacity: 0.8;
-      transition: opacity 0.6s;
     }
-    img:hover {
-      opacity: 0.7;
+  }
+  .qr-code {
+    width: 260px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    img {
+      width: 100%;
     }
+  }
+  .qr-code:hover {
+    opacity: 1;
   }
 }
 
@@ -141,7 +155,7 @@ h2 {
 .skills-grid {
   grid-area: d;
   grid-template:
-    " . . heading heading . . " 100px
+    " . heading heading heading heading . " 100px
     " a a b b c c " 1fr
     " d d e e f f " 1fr
     " . g g h h . " 1fr
@@ -434,7 +448,22 @@ h2 {
 }
 // FOOTER
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 4rem;
   background: $bg-color-black;
+  color: $bg-color-white;
   border-top: 2px solid $bg-color-red;
+  font-size: 1.2rem;
+  padding: 2rem 1rem;
+  .socials a {
+    color: $bg-color-white;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    transition: color 0.4s;
+  }
+  .socials a:hover {
+    color: $bg-color-red;
+  }
 }
