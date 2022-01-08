@@ -10,6 +10,9 @@ body {
 body::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
+.main-container{
+  position: relative;
+} 
 // HEADER
 header {
   height: 100vh;
@@ -202,9 +205,6 @@ h2 {
     grid-area: h;
     width: 140px;
   }
-}
-.brain {
-  grid-area: c;
 }
 // PROJECTS
 .projects-section {
