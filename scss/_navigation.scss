@@ -5,8 +5,8 @@
   padding: 0.5rem 1rem;
   background-color: $bg-color-black;
   .logo {
-    width: 80px;
     margin-top: 0.2rem;
+    width: 80px;
     img {
       width: 100%;
       opacity: 0.8;
@@ -118,5 +118,75 @@
     transition: none;
     font-size: 1.5rem;
     transition: all 4s;
+  }
+}
+.topnav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 10;
+  .logo {
+    background: $bg-color-black-light;
+    width: 90px;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+    img {
+      width: 100%;
+    }
+  }
+  #myLinks {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: black;
+    height: 100vh;
+    .sub-myLinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      a {
+        margin: 1rem 0;
+        color: $bg-color-red-light;
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      a:hover {
+        color: $bg-color-red;
+      }
+      a:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.trigger {
+  padding: 0.8rem;
+  margin: 0.4rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: $bg-color-red;
+  background: $bg-color-black-light;
+  border-radius: 50%;
+  z-index: 10;
+  a {
+    color: $bg-color-red;
+    padding: 0.3rem;
+  }
+
+  a:hover {
+    color: $bg-color-red-light;
+  }
+  a i {
+    transition: all 0.1s;
+  }
+  a:active i{
+    transform: scale(1.2) rotate(90deg);
   }
 }

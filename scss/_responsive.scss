@@ -1,6 +1,23 @@
+@media (min-width: 768px) {
+  .topnav {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
   .aside-nav {
     display: none;
+  }
+  .welcome {
+    h2 {
+      font-size: 2.5rem;
+    }
+    h1 {
+      font-size: 1.7rem;
+    }
   }
   .section {
     height: 70rem;
@@ -48,9 +65,9 @@
       " c " 0.1fr
       / 1fr;
   }
-.about-grid .biography .paragraph p{
+  .about-grid .biography .paragraph p {
     line-height: 1.8rem;
-}
+  }
   .about-btn {
     display: block;
   }
@@ -58,11 +75,11 @@
     display: none;
   }
   .skills-grid {
-    row-gap: 4rem;
+    row-gap: 2rem;
     .logo-box {
       justify-content: center;
       img {
-        width: 80%;
+        width: 60%;
         padding: 1rem;
         background: $pure-white;
       }

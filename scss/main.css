@@ -138,6 +138,7 @@ h2 {
 }
 
 .git-link {
+  display: block;
   grid-area: d;
   margin: auto auto;
 }
@@ -573,8 +574,8 @@ footer .socials a:hover {
 }
 
 .navbar .logo {
-  width: 80px;
   margin-top: 0.2rem;
+  width: 80px;
 }
 
 .navbar .logo img {
@@ -712,6 +713,105 @@ footer .socials a:hover {
   transition: all 4s;
 }
 
+.topnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+}
+
+.topnav .logo {
+  background: rgba(0, 0, 0, 0.666);
+  width: 90px;
+  margin: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.topnav .logo img {
+  width: 100%;
+}
+
+.topnav #myLinks {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: black;
+  height: 100vh;
+}
+
+.topnav #myLinks .sub-myLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.topnav #myLinks .sub-myLinks a {
+  margin: 1rem 0;
+  color: rgba(255, 111, 0, 0.7);
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.topnav #myLinks .sub-myLinks a:hover {
+  color: #ff6f00;
+}
+
+.topnav #myLinks .sub-myLinks a:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.trigger {
+  padding: 0.8rem;
+  margin: 0.4rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #ff6f00;
+  background: rgba(0, 0, 0, 0.666);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.trigger a {
+  color: #ff6f00;
+  padding: 0.3rem;
+}
+
+.trigger a:hover {
+  color: rgba(255, 111, 0, 0.7);
+}
+
+.trigger a i {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.trigger a:active i {
+  -webkit-transform: scale(1.2) rotate(90deg);
+          transform: scale(1.2) rotate(90deg);
+}
+
 .section {
   height: 70rem;
   padding: 0 3rem;
@@ -807,9 +907,24 @@ footer .socials a:hover {
           transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+  .topnav {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
   .aside-nav {
     display: none;
+  }
+  .welcome h2 {
+    font-size: 2.5rem;
+  }
+  .welcome h1 {
+    font-size: 1.7rem;
   }
   .section {
     height: 70rem;
@@ -846,7 +961,7 @@ footer .socials a:hover {
     display: none;
   }
   .skills-grid {
-    row-gap: 4rem;
+    row-gap: 2rem;
   }
   .skills-grid .logo-box {
     -webkit-box-pack: center;
@@ -854,7 +969,7 @@ footer .socials a:hover {
             justify-content: center;
   }
   .skills-grid .logo-box img {
-    width: 80%;
+    width: 60%;
     padding: 1rem;
     background: white;
   }

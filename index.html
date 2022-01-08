@@ -13,16 +13,33 @@
 
 <body>
     <div class="main-container">
-        <ul class="aside-nav">
-            <li><a href="#"></a></li>
-            <li><a href="#about"></a></li>
-            <li><a href="#skills"></a></li>
-            <li><a href="#projects"></a></li>
-            <li><a href="#contact"></a></li>
-        </ul>
+        <nav>
+            <ul class="aside-nav">
+                <li><a href="#"></a></li>
+                <li><a href="#about"></a></li>
+                <li><a href="#skills"></a></li>
+                <li><a href="#projects"></a></li>
+                <li><a href="#contact"></a></li>
+            </ul>
+        </nav>
+        <nav class="topnav">
+            <div class="logo">
+                <img src="./img/logo_small_orange.png" alt="logo">
+            </div>
+            <div id="myLinks" class="myLinks">
+                <div class="sub-myLinks">
+                        <a href="#about">About Me</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="trigger"><a href="javascript:void(0);" class="icon" onclick="trigger()">
+                    <i class="fa fa-bars"></i>
+                </a></div>
+        </nav>
         <header>
             <nav class="navbar">
-
                 <div class="logo">
                     <img src="./img/logo_small_orange.png" alt="logo">
                 </div>
@@ -80,7 +97,6 @@
                     </div>
                 </div>
                 <div class="git-link">
-
                     <div class="qr-code">
                         <a href="https://github.com/fbphc" target="_blank"><img src="./img/qrcode_8184995_.png"
                                 alt="qr code"></a>
