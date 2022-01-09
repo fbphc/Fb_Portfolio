@@ -65,6 +65,6 @@ document.querySelectorAll(".disappear").forEach((item) => {
     document.querySelector(".par-text-1").style.display = "block";
     document.querySelector(".par-text-2").style.display = "none";
     document.querySelector(".appear").style.display = "block";
-    document.querySelector(".disappear").style.display = "block";
+    document.querySelector(".disappear").style.display = "none";
   });
 });

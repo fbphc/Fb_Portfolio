@@ -648,7 +648,11 @@ footer .socials a:hover {
   height: 100%;
 }
 
-.aside-nav a {
+.aside-nav ul {
+  list-style: none;
+}
+
+.aside-nav ul a {
   display: block;
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.131);
@@ -663,12 +667,12 @@ footer .socials a:hover {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.aside-nav a:hover {
+.aside-nav ul a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.aside-nav li:first-child a:hover::after {
+.aside-nav ul li:first-child a:hover::after {
   content: "\f139";
   position: relative;
   bottom: 8px;
@@ -676,7 +680,7 @@ footer .socials a:hover {
   font-family: "FontAwesome";
 }
 
-.aside-nav li:nth-child(2) a:hover::after {
+.aside-nav ul li:nth-child(2) a:hover::after {
   content: "\f029";
   position: relative;
   bottom: 8px;
@@ -684,7 +688,7 @@ footer .socials a:hover {
   font-family: "FontAwesome";
 }
 
-.aside-nav li:nth-child(3) a:hover::after {
+.aside-nav ul li:nth-child(3) a:hover::after {
   content: "\f5dc";
   position: relative;
   bottom: 8px;
@@ -692,7 +696,7 @@ footer .socials a:hover {
   font-family: "FontAwesome";
 }
 
-.aside-nav li:nth-child(4) a:hover::after {
+.aside-nav ul li:nth-child(4) a:hover::after {
   content: "\f542";
   position: relative;
   bottom: 8px;
@@ -700,7 +704,7 @@ footer .socials a:hover {
   font-family: "FontAwesome";
 }
 
-.aside-nav li:last-child a:hover::after {
+.aside-nav ul li:last-child a:hover::after {
   content: "\f0e0";
   position: relative;
   bottom: 8px;
@@ -709,17 +713,17 @@ footer .socials a:hover {
   /* text-shadow: 2px 2px 2px #000000; */
 }
 
-.aside-nav a:active {
+.aside-nav ul a:active {
   border: 2px solid #ff70039a;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.aside-nav a:active::after {
+.aside-nav ul a:active::after {
   color: #ff70039a;
 }
 
-.aside-nav a::after {
+.aside-nav ul a::after {
   color: white;
   -webkit-transition: none;
   transition: none;
@@ -1025,7 +1029,7 @@ footer .socials a:hover {
   width: 50%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 601px) {
   .topnav {
     display: none;
   }
@@ -1034,7 +1038,7 @@ footer .socials a:hover {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .navbar {
     display: none;
   }
@@ -1080,6 +1084,12 @@ footer .socials a:hover {
   }
   .about-grid .biography .paragraph p {
     line-height: 1.4rem;
+  }
+  .appear {
+    display: block;
+  }
+  .disapper {
+    display: none;
   }
   .about-btn {
     display: block;

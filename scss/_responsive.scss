@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 601px) {
   .topnav {
     display: none;
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .navbar {
     display: none;
   }
@@ -76,7 +76,12 @@
   .about-grid .biography .paragraph p {
     line-height: 1.4rem;
   }
-
+.appear{
+  display: block;
+}
+.disapper{
+  display: none;
+}
   .about-btn {
     display: block;
     justify-self: center;
