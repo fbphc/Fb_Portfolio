@@ -159,6 +159,7 @@
       }
       a:hover {
         color: $bg-color-red;
+        text-decoration: 3px underline overline $bg-color-white;
       }
       a:active {
         transform: scale(1.1);
