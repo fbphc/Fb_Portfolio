@@ -71,6 +71,9 @@ header {
 main {
   color: $bg-color-white;
 }
+h1 {
+  letter-spacing: 0.2rem;
+}
 h2 {
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
@@ -133,10 +136,12 @@ h2 {
 .git-link {
   display: block;
   grid-area: d;
-  margin: auto auto;
+ align-self: center;
+ justify-self: center;
+ margin-top: 6rem;
 
   .scan {
-    width: 180px;
+    width: 160px;
     margin: 1.5rem auto;
 
     img {
@@ -144,7 +149,7 @@ h2 {
     }
   }
   .qr-code {
-    width: 260px;
+    width: 210px;
     opacity: 0.7;
     transition: opacity 0.3s;
     img {
@@ -176,8 +181,8 @@ h2 {
     grid-area: heading;
   }
   .logo-box {
-    justify-self: center;
     display: flex;
+    justify-self: center;
     align-items: center;
     img {
       width: 100%;

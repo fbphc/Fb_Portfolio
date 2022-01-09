@@ -1,14 +1,20 @@
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .topnav {
+    display: none;
+  }
+  .welcome-mobile {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
     display: none;
   }
   .aside-nav {
+    display: none;
+  }
+  .welcome-mobile {
     display: none;
   }
   .welcome {
@@ -73,35 +79,6 @@
   .about-grid .biography .paragraph p {
     line-height: 1.4rem;
   }
-  .about-grid {
-    .text-btn {
-      align-self: center;
-      .appear,
-      .disappear {
-        text-align: center;
-        margin-top: 0.8rem;
-        button {
-          background: $light-white;
-          border: 1px solid transparent;
-          font-size: 1.2rem;
-          padding: 0.4rem;
-          border-radius: 50%;
-          color: $bg-color-red;
-          transition: all 0.2s;
-        }
-        button:hover {
-          border: 1px solid $bg-color-red;
-          transform: scale(1.1);
-        }
-      }
-      .appear {
-        display: block;
-      }
-      .disappear {
-        display: none;
-      }
-    }
-  }
 
   .about-btn {
     display: block;
@@ -136,7 +113,50 @@
 
 @media (max-width: 480px) {
   main h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .welcome {
+    display: none;
+  }
+  .welcome-mobile {
+    display: block;
+    color: $bg-color-white;
+    width: 90%;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    grid-area: w;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+  
+    grid-template:
+      "h1" 1fr
+      "h2" 1fr
+      "h3" 1fr;
+    h1 {
+      grid-area: h1;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1rem;
+    }
+
+    h2 {
+      grid-area: h2;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+      div:nth-child(2) {
+        color: $bg-color-black;
+        font-size: 2.2rem;
+        text-shadow: -4px -4px 0 $bg-color-red-light, 4px -4px 0 $bg-color-red-light,
+      -4px 4px 0 $bg-color-red-light, 4px 4px 0 $bg-color-red-light;
+      }
+    }
+    gap: 2rem;
   }
   .about-grid {
     .biography {
@@ -144,6 +164,30 @@
         font-size: 1rem;
         line-height: 0.4rem;
       }
+    }
+  }
+  .skills-grid {
+    grid-area: d;
+    grid-template:
+      " heading heading heading heading " 100px
+      " a a b b " 1fr
+      " c c d d " 1fr
+      " e e f f " 1fr
+      " g g h h " 1fr
+      / 1fr 1fr 1fr 1fr;
+    row-gap: 2rem;
+    .logo-box {
+      img {
+        width: 60%;
+      }
+    }
+  }
+  footer {
+    .copyright {
+      font-size: 0.8rem;
+    }
+    .socials a {
+      margin-right: 0.3rem;
     }
   }
 }

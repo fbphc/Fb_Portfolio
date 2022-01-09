@@ -89,6 +89,10 @@ main {
   color: rgba(238, 238, 238, 0.782);
 }
 
+h1 {
+  letter-spacing: 0.2rem;
+}
+
 h2 {
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
@@ -153,11 +157,16 @@ h2 {
 .git-link {
   display: block;
   grid-area: d;
-  margin: auto auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 6rem;
 }
 
 .git-link .scan {
-  width: 180px;
+  width: 160px;
   margin: 1.5rem auto;
 }
 
@@ -166,7 +175,7 @@ h2 {
 }
 
 .git-link .qr-code {
-  width: 260px;
+  width: 210px;
   opacity: 0.7;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -198,10 +207,10 @@ h2 {
 }
 
 .skills-grid .logo-box {
-  justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -778,8 +787,8 @@ footer .socials a:hover {
 }
 
 .topnav #myLinks .sub-myLinks a {
-  margin: 1rem 0;
-  color: rgba(255, 111, 0, 0.7);
+  color: #ff6f00;
+  margin: 1.2rem 0;
   font-size: 2.2rem;
   font-weight: bold;
   text-decoration: none;
@@ -788,14 +797,34 @@ footer .socials a:hover {
 }
 
 .topnav #myLinks .sub-myLinks a:hover {
-  color: #ff6f00;
+  color: rgba(255, 111, 0, 0.7);
   -webkit-text-decoration: 3px underline overline rgba(238, 238, 238, 0.782);
           text-decoration: 3px underline overline rgba(238, 238, 238, 0.782);
+}
+
+.topnav #myLinks .sub-myLinks a:hover i {
+  color: rgba(238, 238, 238, 0.782);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .topnav #myLinks .sub-myLinks a:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.topnav #myLinks .sub-myLinks a:active i {
+  color: rgba(238, 238, 238, 0.782);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.topnav #myLinks .sub-myLinks i {
+  font-size: 2.4rem;
+  margin: 0 1.6rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #ff6f00;
 }
 
 .trigger {
@@ -895,12 +924,59 @@ footer .socials a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.text-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.text-btn .appear,
+.text-btn .disappear {
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.text-btn .appear button,
+.text-btn .disappear button {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #ff6f00;
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  color: white;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+
+.text-btn .appear button:hover,
+.text-btn .disappear button:hover {
+  border: 1px solid white;
+  background-color: #ff6f00;
+}
+
+.text-btn .appear button:active,
+.text-btn .disappear button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.text-btn .appear {
+  display: block;
+}
+
+.text-btn .disappear {
+  display: none;
+}
+
 .submit button {
   background: rgba(255, 255, 255, 0.15);
   border: 2px solid white;
 }
 
-.submit button, .about-btn a {
+.submit button,
+.about-btn a {
   color: white;
   text-align: left;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
@@ -915,28 +991,36 @@ footer .socials a:hover {
   transition: background-color 0.3s;
 }
 
-.submit button:hover, .about-btn a:hover {
+.submit button:hover,
+.about-btn a:hover {
   background-color: #ff6f00;
   border-color: rgba(238, 238, 238, 0.782);
 }
 
-.submit button:active, .about-btn a:active {
+.submit button:active,
+.about-btn a:active {
   opacity: 0.8;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .topnav {
+    display: none;
+  }
+  .welcome-mobile {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
     display: none;
   }
   .aside-nav {
+    display: none;
+  }
+  .welcome-mobile {
     display: none;
   }
   .welcome {
@@ -980,39 +1064,6 @@ footer .socials a:hover {
   .about-grid .biography .paragraph p {
     line-height: 1.4rem;
   }
-  .about-grid .text-btn {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .about-grid .text-btn .appear,
-  .about-grid .text-btn .disappear {
-    text-align: center;
-    margin-top: 0.8rem;
-  }
-  .about-grid .text-btn .appear button,
-  .about-grid .text-btn .disappear button {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid transparent;
-    font-size: 1.2rem;
-    padding: 0.4rem;
-    border-radius: 50%;
-    color: #ff6f00;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-  }
-  .about-grid .text-btn .appear button:hover,
-  .about-grid .text-btn .disappear button:hover {
-    border: 1px solid #ff6f00;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  .about-grid .text-btn .appear {
-    display: block;
-  }
-  .about-grid .text-btn .disappear {
-    display: none;
-  }
   .about-btn {
     display: block;
     -ms-grid-column-align: center;
@@ -1047,11 +1098,63 @@ footer .socials a:hover {
 
 @media (max-width: 480px) {
   main h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .welcome {
+    display: none;
+  }
+  .welcome-mobile {
+    display: block;
+    color: rgba(238, 238, 238, 0.782);
+    width: 90%;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 10rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    grid-area: w;
+    text-align: center;
+    border: 1px solid black;
+    grid-template: "h1" 1fr "h2" 1fr "h3" 1fr;
+    gap: 2rem;
+  }
+  .welcome-mobile h1 {
+    grid-area: h1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  .welcome-mobile h2 {
+    grid-area: h2;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+  }
+  .welcome-mobile h2 div:nth-child(2) {
+    color: black;
+    font-size: 2.2rem;
+    text-shadow: -4px -4px 0 rgba(255, 111, 0, 0.7), 4px -4px 0 rgba(255, 111, 0, 0.7), -4px 4px 0 rgba(255, 111, 0, 0.7), 4px 4px 0 rgba(255, 111, 0, 0.7);
   }
   .about-grid .biography p {
     font-size: 1rem;
     line-height: 0.4rem;
+  }
+  .skills-grid {
+    grid-area: d;
+    grid-template: " heading heading heading heading " 100px " a a b b " 1fr " c c d d " 1fr " e e f f " 1fr " g g h h " 1fr / 1fr 1fr 1fr 1fr;
+    row-gap: 2rem;
+  }
+  .skills-grid .logo-box img {
+    width: 60%;
+  }
+  footer .copyright {
+    font-size: 0.8rem;
+  }
+  footer .socials a {
+    margin-right: 0.3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
