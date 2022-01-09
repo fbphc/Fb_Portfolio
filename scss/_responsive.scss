@@ -26,10 +26,7 @@
       font-size: 1.8rem;
     }
   }
-  .appear,
-  .disappear {
-    display: none;
-  }
+
   .section {
     height: 70rem;
     padding: 0 2rem;
@@ -123,7 +120,7 @@
     color: $bg-color-white;
     width: 90%;
     position: relative;
-    top: 40%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 10rem;
@@ -131,32 +128,37 @@
     text-transform: uppercase;
     grid-area: w;
     text-align: center;
-    border: 1px solid rgb(0, 0, 0);
-  
     grid-template:
       "h1" 1fr
       "h2" 1fr
-      "h3" 1fr;
+      "h3" 1fr
+      / 1fr;
     h1 {
       grid-area: h1;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      padding: 0.5rem 0;
       letter-spacing: 0.1rem;
+      div:nth-child(2) {
+        padding: 0.6rem 0;
+      }
     }
 
     h2 {
       grid-area: h2;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       letter-spacing: 0.1rem;
-      margin-bottom: 1rem;
       div:nth-child(2) {
-        color: $bg-color-black;
-        font-size: 2.2rem;
-        text-shadow: -4px -4px 0 $bg-color-red-light, 4px -4px 0 $bg-color-red-light,
-      -4px 4px 0 $bg-color-red-light, 4px 4px 0 $bg-color-red-light;
+        color: $bg-color-black-light;
+        font-size: 2rem;
+        padding: 0.6rem 0;
       }
     }
-    gap: 2rem;
+    h3 {
+      div:nth-child(2) {
+        font-size: 1.5rem;
+        margin: 0.6rem 0;
+      }
+    }
   }
   .about-grid {
     .biography {

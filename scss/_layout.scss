@@ -43,7 +43,8 @@ header {
   grid-template:
     "h1" min-content
     "h2" 1fr
-    "h3" min-content;
+    "h3" min-content
+    / 1fr;
   h1 {
     font-size: 2.5em;
     grid-area: h1;
@@ -120,12 +121,7 @@ h2 {
         }
       }
     }
-    .line {
-      border: 2px solid $bg-color-red;
-      border-radius: 2rem;
-      margin: 0 auto;
-      width: 80%;
-    }
+    
   }
   .about-btn-container{
     grid-area: about-btn;

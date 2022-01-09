@@ -54,8 +54,8 @@ header {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  grid-template: "h1" -webkit-min-content "h2" 1fr "h3" -webkit-min-content;
-  grid-template: "h1" min-content "h2" 1fr "h3" min-content;
+  grid-template: "h1" -webkit-min-content "h2" 1fr "h3" -webkit-min-content / 1fr;
+  grid-template: "h1" min-content "h2" 1fr "h3" min-content / 1fr;
   gap: 2rem;
 }
 
@@ -136,13 +136,6 @@ h2 {
 
 .about-grid .biography .paragraph p .par-text-2 {
   display: none;
-}
-
-.about-grid .biography .line {
-  border: 2px solid #ff6f00;
-  border-radius: 2rem;
-  margin: 0 auto;
-  width: 80%;
 }
 
 .about-grid .about-btn-container {
@@ -1004,6 +997,34 @@ footer .socials a:hover {
           transform: scale(1.1);
 }
 
+.line {
+  border: 2px solid #ff6f00;
+  border-radius: 2rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.line-black01 {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 2rem;
+  margin: 1rem auto;
+  width: 10%;
+}
+
+.line-black02 {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 2rem;
+  margin: 1rem auto;
+  width: 30%;
+}
+
+.line-black03 {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 2rem;
+  margin: 1.5rem auto;
+  width: 50%;
+}
+
 @media (min-width: 768px) {
   .topnav {
     display: none;
@@ -1031,10 +1052,6 @@ footer .socials a:hover {
   }
   .welcome h1 {
     font-size: 1.8rem;
-  }
-  .appear,
-  .disappear {
-    display: none;
   }
   .section {
     height: 70rem;
@@ -1108,7 +1125,7 @@ footer .socials a:hover {
     color: rgba(238, 238, 238, 0.782);
     width: 90%;
     position: relative;
-    top: 40%;
+    top: 25%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1117,26 +1134,30 @@ footer .socials a:hover {
     text-transform: uppercase;
     grid-area: w;
     text-align: center;
-    border: 1px solid black;
-    grid-template: "h1" 1fr "h2" 1fr "h3" 1fr;
-    gap: 2rem;
+    grid-template: "h1" 1fr "h2" 1fr "h3" 1fr / 1fr;
   }
   .welcome-mobile h1 {
     grid-area: h1;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
     letter-spacing: 0.1rem;
+  }
+  .welcome-mobile h1 div:nth-child(2) {
+    padding: 0.6rem 0;
   }
   .welcome-mobile h2 {
     grid-area: h2;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
   }
   .welcome-mobile h2 div:nth-child(2) {
-    color: black;
-    font-size: 2.2rem;
-    text-shadow: -4px -4px 0 rgba(255, 111, 0, 0.7), 4px -4px 0 rgba(255, 111, 0, 0.7), -4px 4px 0 rgba(255, 111, 0, 0.7), 4px 4px 0 rgba(255, 111, 0, 0.7);
+    color: rgba(0, 0, 0, 0.666);
+    font-size: 2rem;
+    padding: 0.6rem 0;
+  }
+  .welcome-mobile h3 div:nth-child(2) {
+    font-size: 1.5rem;
+    margin: 0.6rem 0;
   }
   .about-grid .biography p {
     font-size: 1rem;
