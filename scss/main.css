@@ -715,7 +715,7 @@ footer .socials a:hover {
 
 .topnav {
   position: fixed;
-  width: 100%;
+  width: 90%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
