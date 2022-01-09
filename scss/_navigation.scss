@@ -121,12 +121,14 @@
   }
 }
 .topnav {
-  display: flex;
   position: fixed;
   width: 100%;
   justify-content: space-between;
   z-index: 10;
   .logo {
+    position: absolute;
+    top:0; 
+    left: 0;
     background: $bg-color-black-light;
     width: 90px;
     margin: 0.5rem;
@@ -168,6 +170,9 @@
   }
 }
 .trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 0.8rem;
   margin: 0.4rem;
   text-decoration: none;

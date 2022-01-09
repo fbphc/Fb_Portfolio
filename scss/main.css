@@ -714,9 +714,6 @@ footer .socials a:hover {
 }
 
 .topnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: fixed;
   width: 100%;
   -webkit-box-pack: justify;
@@ -726,6 +723,9 @@ footer .socials a:hover {
 }
 
 .topnav .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.666);
   width: 90px;
   margin: 0.5rem;
@@ -785,6 +785,9 @@ footer .socials a:hover {
 }
 
 .trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 0.8rem;
   margin: 0.4rem;
   text-decoration: none;
