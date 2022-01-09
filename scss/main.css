@@ -138,6 +138,13 @@ h2 {
   display: none;
 }
 
+.about-grid .biography .line {
+  border: 2px solid #ff6f00;
+  border-radius: 2rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
 .about-grid .about-btn-container {
   grid-area: about-btn;
   display: -webkit-box;
@@ -1025,11 +1032,11 @@ footer .socials a:hover {
 .line-black03 {
   border: 1px solid rgba(0, 0, 0, 0.18);
   border-radius: 2rem;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   width: 50%;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 769px) {
   .topnav {
     display: none;
   }
@@ -1038,7 +1045,7 @@ footer .socials a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
     display: none;
   }
@@ -1088,7 +1095,7 @@ footer .socials a:hover {
   .appear {
     display: block;
   }
-  .disapper {
+  .disappear {
     display: none;
   }
   .about-btn {

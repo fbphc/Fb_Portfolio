@@ -1,4 +1,4 @@
-@media (min-width: 601px) {
+@media (min-width: 769px) {
   .topnav {
     display: none;
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
     display: none;
   }
@@ -79,7 +79,7 @@
 .appear{
   display: block;
 }
-.disapper{
+.disappear{
   display: none;
 }
   .about-btn {
