@@ -103,7 +103,7 @@ h2 {
 
 .about-grid {
   grid-area: c;
-  grid-template: " heading heading heading " 100px " bio bio bio " 1fr " . about-btn . " 120px / 1fr 1fr 1fr;
+  grid-template: " heading heading heading " 100px " bio bio bio " 1fr " about-btn about-btn about-btn " 100px / 1fr 1fr 1fr;
   gap: 0.5rem;
 }
 
@@ -130,11 +130,24 @@ h2 {
   letter-spacing: 2px;
 }
 
+.about-grid .biography .paragraph p .par-text-2 {
+  display: none;
+}
+
 .about-grid .biography .line {
   border: 2px solid #ff6f00;
   border-radius: 2rem;
   margin: 0 auto;
   width: 80%;
+}
+
+.about-grid .about-btn-container {
+  grid-area: about-btn;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .git-link {
@@ -284,13 +297,13 @@ h2 {
 }
 
 .projects-section .projects-grid .box1:hover::after {
-  background-color: rgba(255, 0, 0, 0.1);
+  background-color: rgba(255, 93, 93, 0.1);
   border-radius: 12rem 0 0 0;
 }
 
 .projects-section .projects-grid .box1::after {
   content: "";
-  background-color: rgba(255, 0, 0, 0.6);
+  background-color: rgba(255, 93, 93, 0.6);
   display: block;
   position: absolute;
   border-radius: 12rem 0 0 0;
@@ -413,7 +426,7 @@ h2 {
   width: 80%;
   -ms-grid-column-align: center;
       justify-self: center;
-  grid-template: " . . . " 0.1fr " name mail subject" 80px " text text text " 0.6fr " submit submit required" 50px / 1fr 1fr 1fr;
+  grid-template: " . . . " 0.1fr " name mail subject" 80px " text text text " 0.6fr " submit required required" 50px / 1fr 1fr 1fr;
 }
 
 .form-grid .message {
@@ -742,8 +755,9 @@ footer .socials a:hover {
   display: none;
   position: absolute;
   width: 100%;
-  background: black;
+  right: 0;
   height: 100vh;
+  background: black;
 }
 
 .topnav #myLinks .sub-myLinks {
@@ -769,8 +783,8 @@ footer .socials a:hover {
   font-size: 2.2rem;
   font-weight: bold;
   text-decoration: none;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .topnav #myLinks .sub-myLinks a:hover {
@@ -929,10 +943,14 @@ footer .socials a:hover {
     top: 50%;
   }
   .welcome h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .welcome h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+  }
+  .appear,
+  .disappear {
+    display: none;
   }
   .section {
     height: 70rem;
@@ -960,10 +978,45 @@ footer .socials a:hover {
     grid-template: " a " 0.3fr " b " 1fr " c " 0.1fr / 1fr;
   }
   .about-grid .biography .paragraph p {
-    line-height: 1.8rem;
+    line-height: 1.4rem;
+  }
+  .about-grid .text-btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .about-grid .text-btn .appear,
+  .about-grid .text-btn .disappear {
+    text-align: center;
+    margin-top: 0.8rem;
+  }
+  .about-grid .text-btn .appear button,
+  .about-grid .text-btn .disappear button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: #ff6f00;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .about-grid .text-btn .appear button:hover,
+  .about-grid .text-btn .disappear button:hover {
+    border: 1px solid #ff6f00;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .about-grid .text-btn .appear {
+    display: block;
+  }
+  .about-grid .text-btn .disappear {
+    display: none;
   }
   .about-btn {
     display: block;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .git-link {
     display: none;
@@ -986,6 +1039,19 @@ footer .socials a:hover {
   }
   .form-grid {
     width: 100%;
+  }
+  .form-grid .par-req p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main h2 {
+    font-size: 2rem;
+  }
+  .about-grid .biography p {
+    font-size: 1rem;
+    line-height: 0.4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

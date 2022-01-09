@@ -14,11 +14,15 @@
   .welcome {
     top: 50%;
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
     h1 {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
     }
+  }
+  .appear,
+  .disappear {
+    display: none;
   }
   .section {
     height: 70rem;
@@ -67,10 +71,41 @@
       / 1fr;
   }
   .about-grid .biography .paragraph p {
-    line-height: 1.8rem;
+    line-height: 1.4rem;
   }
+  .about-grid {
+    .text-btn {
+      align-self: center;
+      .appear,
+      .disappear {
+        text-align: center;
+        margin-top: 0.8rem;
+        button {
+          background: $light-white;
+          border: 1px solid transparent;
+          font-size: 1.2rem;
+          padding: 0.4rem;
+          border-radius: 50%;
+          color: $bg-color-red;
+          transition: all 0.2s;
+        }
+        button:hover {
+          border: 1px solid $bg-color-red;
+          transform: scale(1.1);
+        }
+      }
+      .appear {
+        display: block;
+      }
+      .disappear {
+        display: none;
+      }
+    }
+  }
+
   .about-btn {
     display: block;
+    justify-self: center;
   }
   .git-link {
     display: none;
@@ -91,9 +126,24 @@
   }
   .form-grid {
     width: 100%;
+    .par-req {
+      p {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
 
-@media (max-width: 480px){
-  
+@media (max-width: 480px) {
+  main h2 {
+    font-size: 2rem;
+  }
+  .about-grid {
+    .biography {
+      p {
+        font-size: 1rem;
+        line-height: 0.4rem;
+      }
+    }
+  }
 }

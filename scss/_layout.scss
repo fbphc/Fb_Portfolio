@@ -86,7 +86,7 @@ h2 {
   grid-template:
     " heading heading heading " 100px
     " bio bio bio " 1fr
-    " . about-btn . " 120px
+    " about-btn about-btn about-btn " 100px
     / 1fr 1fr 1fr;
   gap: 0.5rem;
 
@@ -112,6 +112,9 @@ h2 {
         line-height: 2.4rem;
         font-size: 1.2rem;
         letter-spacing: 2px;
+        .par-text-2 {
+          display: none;
+        }
       }
     }
     .line {
@@ -121,6 +124,11 @@ h2 {
       width: 80%;
     }
   }
+  .about-btn-container{
+    grid-area: about-btn;
+    display: flex;
+    justify-content: space-around;
+    }
 }
 .git-link {
   display: block;
@@ -246,12 +254,12 @@ h2 {
       background: url("../img/04_burger.png") center / cover no-repeat;
     }
     .box1:hover::after {
-      background-color: rgba(255, 0, 0, 0.1);
+      background-color: rgba(255, 93, 93, 0.1);
       border-radius: 12rem 0 0 0;
     }
     .box1::after {
       content: "";
-      background-color: rgba(255, 0, 0, 0.6);
+      background-color: rgba(255, 93, 93, 0.6);
       display: block;
       position: absolute;
       border-radius: 12rem 0 0 0;
@@ -356,7 +364,7 @@ h2 {
     " . . . " 0.1fr
     " name mail subject" 80px
     " text text text " 0.6fr
-    " submit submit required" 50px
+    " submit required required" 50px
     / 1fr 1fr 1fr;
   .message {
     height: 100%;

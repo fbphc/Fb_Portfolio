@@ -37,7 +37,7 @@ function animationText(words, id, color) {
 }
 
 function trigger() {
-  var x = document.getElementById("myLinks");
+  let x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -45,12 +45,26 @@ function trigger() {
   }
 }
 
-
-const daje = document.querySelectorAll(".close");
-
-
-document.querySelectorAll('.close').forEach(item => {
-  item.addEventListener('click', event => {
+document.querySelectorAll(".mouseEvent").forEach((item) => {
+  item.addEventListener("click", (event) => {
     document.getElementById("myLinks").style.display = "none";
-  })
+  });
+});
+
+document.querySelectorAll(".appear").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    document.querySelector(".par-text-1").style.display = "none";
+    document.querySelector(".par-text-2").style.display = "block";
+    document.querySelector(".appear").style.display = "none";
+    document.querySelector(".disappear").style.display = "block";
+  });
+});
+
+document.querySelectorAll(".disappear").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    document.querySelector(".par-text-1").style.display = "block";
+    document.querySelector(".par-text-2").style.display = "none";
+    document.querySelector(".appear").style.display = "block";
+    document.querySelector(".disappear").style.display = "none";
+  });
 });
