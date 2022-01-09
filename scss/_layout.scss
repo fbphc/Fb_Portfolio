@@ -128,18 +128,18 @@ h2 {
       width: 80%;
     }
   }
-  .about-btn-container{
+  .about-btn-container {
     grid-area: about-btn;
     display: flex;
     justify-content: space-around;
-    }
+  }
 }
 .git-link {
   display: block;
   grid-area: d;
- align-self: center;
- justify-self: center;
- margin-top: 6rem;
+  align-self: center;
+  justify-self: center;
+  margin-top: 6rem;
 
   .scan {
     width: 160px;
@@ -258,6 +258,20 @@ h2 {
       width: 100%;
       position: relative;
       background: url("../img/04_burger.png") center / cover no-repeat;
+      .sub-box1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        a{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
     }
     .box1:hover::after {
       background-color: rgba(255, 93, 93, 0.1);
@@ -271,13 +285,27 @@ h2 {
       border-radius: 12rem 0 0 0;
       height: 100%;
       width: 100%;
-      transition: all 0.6s;
+      transition: all 1s;
     }
     .box2 {
       grid-area: b;
       width: 100%;
       position: relative;
       background: url("../img/01_colorful.png") center / cover no-repeat;
+      .sub-box2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        a{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
     }
     .box2:hover::after {
       background-color: rgba(255, 182, 193, 0.1);
@@ -296,6 +324,20 @@ h2 {
       width: 100%;
       position: relative;
       background: url("../img/02_graph.png") center / cover no-repeat;
+      .sub-box3 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        a{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
     }
     .box3:hover::after {
       background-color: rgba(255, 123, 0, 0.1);
@@ -314,6 +356,20 @@ h2 {
       width: 100%;
       position: relative;
       background: url("../img/03_travel.png") center / cover no-repeat;
+      .sub-box4 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        a{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
     }
     .box4:hover::after {
       background-color: rgba(255, 255, 0, 0.1);
@@ -329,10 +385,25 @@ h2 {
     }
     .box5 {
       grid-area: e;
+      height: 100%;
       width: 100%;
       border-radius: 0 0 12rem 0;
       position: relative;
       background: url("../img/05_game.png") center / cover no-repeat;
+      .sub-box5 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        a{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
     }
     .box5:hover::after {
       background-color: rgba(0, 128, 0, 0.1);
