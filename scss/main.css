@@ -676,7 +676,7 @@ footer {
   background: black;
   color: rgba(238, 238, 238, 0.782);
   border-top: 2px solid #ff6f00;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   padding: 2rem 1rem;
 }
 
@@ -919,8 +919,6 @@ footer .socials a:hover {
 
 .topnav #myLinks .sub-myLinks a:hover i {
   color: rgba(238, 238, 238, 0.782);
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
 }
 
 .topnav #myLinks .sub-myLinks a:active {
@@ -1005,7 +1003,7 @@ footer .socials a:hover {
 }
 
 .grid-one {
-  grid-template: "a b" 0.6fr "c d" 1fr "e f" 0.5fr / 1fr 1fr;
+  grid-template: "a b" 0.4fr "c d" 1fr "e f" 0.5fr / 1fr 1fr;
 }
 
 .grid-two {
