@@ -76,12 +76,12 @@
   .about-grid .biography .paragraph p {
     line-height: 1.4rem;
   }
-.appear{
-  display: block;
-}
-.disappear{
-  display: none;
-}
+  .appear {
+    display: block;
+  }
+  .disappear {
+    display: none;
+  }
   .about-btn {
     display: block;
     justify-self: center;
@@ -103,6 +103,19 @@
       }
     }
   }
+
+  .projects-section {
+    .projects-grid {
+      grid-template:
+        " a a b b " 1fr
+        " a a b b" 1fr
+        " c c e e " 1fr
+        " d d e e " 1fr
+        / 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
   .form-grid {
     width: 100%;
     .par-req {

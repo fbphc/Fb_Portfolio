@@ -9,13 +9,7 @@
   display: grid;
   color: $bg-color-white;
 }
-.filler {
-  font-size: 14rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -10;
-}
+
 .grid-one {
   grid-template:
     "a b" 0.4fr
@@ -77,7 +71,7 @@
       background: $light-white;
       border: 1px solid $bg-color-red;
       font-size: 1.2rem;
-      padding: 0.6rem;
+      padding: 0.4rem 0.6rem;
       border-radius: 50%;
       color: $pure-white;
       transition: background-color 0.1s;
