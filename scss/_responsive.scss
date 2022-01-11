@@ -15,6 +15,25 @@
   .aside-nav {
     display: none;
   }
+  #myLinks{
+    .sub-myLinks{
+      a:active {
+        color: $bg-color-red-light;
+        text-decoration: 3px underline overline $bg-color-white;
+        transform: scale(1.1);
+      }
+      a:active i {
+        color: $bg-color-white;
+        transform: scale(1.3);
+      }
+      /* i {
+        font-size: 2.4rem;
+        margin: 0 1.6rem;
+        transition: all 0.3s;
+        color: $bg-color-red;
+      } */
+    }
+  }
   .welcome-mobile {
     display: none;
   }
