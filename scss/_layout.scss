@@ -29,7 +29,7 @@ header {
 }
 .welcome {
   color: $bg-color-white;
-  width: 900px;
+  width: 90%;
   position: relative;
   top: 40%;
   left: 50%;
@@ -53,21 +53,16 @@ header {
     font-size: 3.5em;
     grid-area: h2;
   }
-  span:nth-child(2) {
-    text-shadow: -1px -1px 0 $bg-color-red-light, 1px -1px 0 $bg-color-red-light,
-      -1px 1px 0 $bg-color-red-light, 1px 1px 0 $bg-color-red-light;
-  }
-  .animation {
-    grid-area: h2;
+  
+  grid-area: h2;
     align-self: center;
-  }
+  
   h3,
   .welcome-icons {
     grid-area: h3;
   }
   gap: 2rem;
 }
-
 // MAIN
 main {
   color: $bg-color-white;
@@ -88,19 +83,26 @@ h2 {
 .about-grid {
   grid-area: c;
   grid-template:
-    " heading heading heading " 100px
-    " bio bio bio " 1fr
-    " about-btn about-btn about-btn " 100px
+    " heading heading . " 100px
+    " bio bio code " 1fr
+    " about-btn about-btn . " 100px
     / 1fr 1fr 1fr;
   gap: 0.5rem;
 
   h2 {
     text-align: center;
     grid-area: heading;
+    align-self: center;
+    margin-top: 3rem;
   }
   .biography {
     grid-area: bio;
+    justify-self: center;
+    align-self: center;
+    margin: 0 1rem;
+    width: 90%;
     .paragraph {
+      margin: 3rem 0;
       background: radial-gradient(
           circle,
           rgba(0, 0, 0, 0) 0%,
@@ -108,16 +110,18 @@ h2 {
         ),
         url(../img/14433049_10207226138916542_3714018530593715073_n.jpg) top /
           cover no-repeat;
-      p {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 1rem;
-        font-weight: bold;
-        text-align: center;
-        line-height: 2.4rem;
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-        .par-text-2 {
-          display: none;
+      .sub-paragraph {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 2rem 0;
+        p {
+          line-height: 2.6rem;
+          font-weight: bold;
+          text-align: center;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+          .par-text-2 {
+            display: none;
+          }
         }
       }
     }
@@ -125,7 +129,7 @@ h2 {
       border: 2px solid $bg-color-red;
       border-radius: 2rem;
       margin: 0 auto;
-      width: 80%;
+      width: 76%;
     }
   }
   .about-btn-container {
@@ -135,12 +139,10 @@ h2 {
   }
 }
 .git-link {
-  display: block;
-  grid-area: d;
-  align-self: center;
+  grid-area: code;
   justify-self: center;
-  margin-top: 6rem;
-
+  align-self: center;
+  margin-top: 5rem;
   .scan {
     width: 160px;
     margin: 1.5rem auto;
@@ -266,7 +268,7 @@ h2 {
         justify-content: center;
         align-items: center;
         z-index: 10;
-        a{
+        a {
           width: 100%;
           height: 100%;
           display: block;
@@ -300,7 +302,7 @@ h2 {
         justify-content: center;
         align-items: center;
         z-index: 10;
-        a{
+        a {
           width: 100%;
           height: 100%;
           display: block;
@@ -332,7 +334,7 @@ h2 {
         justify-content: center;
         align-items: center;
         z-index: 10;
-        a{
+        a {
           width: 100%;
           height: 100%;
           display: block;
@@ -364,7 +366,7 @@ h2 {
         justify-content: center;
         align-items: center;
         z-index: 10;
-        a{
+        a {
           width: 100%;
           height: 100%;
           display: block;
@@ -398,7 +400,7 @@ h2 {
         justify-content: center;
         align-items: center;
         z-index: 10;
-        a{
+        a {
           width: 100%;
           height: 100%;
           display: block;

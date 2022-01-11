@@ -1,5 +1,5 @@
 .section {
-  height: 70rem;
+  height: 72rem;
   padding: 0 3rem;
   display: grid;
 }
@@ -12,8 +12,8 @@
 
 .grid-one {
   grid-template:
-    "a b" 0.4fr
-    "c d" 1fr
+    "a b" 0.2fr
+    "c c" 1fr
     "e f" 0.5fr
     / 1fr 1fr;
 }
