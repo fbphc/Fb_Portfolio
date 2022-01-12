@@ -203,7 +203,7 @@ h2 {
 
 .skills-grid {
   grid-area: d;
-  grid-template: " . heading heading heading heading . " 100px " a a b b c c " 1fr " d d e e f f " 1fr " . g g h h . " 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: " heading heading heading " 100px " a b c " 1fr " d e f " 1fr " g h i " 1fr / 1fr 1fr 1fr;
   row-gap: 2rem;
 }
 
@@ -220,6 +220,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 9rem;
+  /* img:hover {
+    } */
 }
 
 .skills-grid .logo-box img {
@@ -227,56 +230,74 @@ h2 {
   padding: 1.5rem;
   border-radius: 2rem;
   border: 1px solid #ff6f00;
-  background: rgba(238, 238, 238, 0.782);
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
-.skills-grid .logo-box img:hover {
-  background: white;
+.skills-grid .logo-a:hover img {
+  -webkit-transform: skew(-30deg, 120deg);
+          transform: skew(-30deg, 120deg);
   border: 1px solid transparent;
   -webkit-box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
           box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  opacity: 0;
 }
 
 .skills-grid .logo-a {
   grid-area: a;
-  width: 160px;
 }
 
 .skills-grid .logo-b {
   grid-area: b;
-  width: 220px;
 }
 
 .skills-grid .logo-c {
   grid-area: c;
-  width: 200px;
+}
+
+.skills-grid .logo-c:hover img {
+  -webkit-transform: skew(-30deg, 120deg);
+          transform: skew(-30deg, 120deg);
+  border: 1px solid transparent;
+  -webkit-box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+          box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  opacity: 0;
 }
 
 .skills-grid .logo-d {
   grid-area: d;
-  width: 180px;
 }
 
 .skills-grid .logo-e {
   grid-area: e;
-  width: 180px;
+}
+
+.skills-grid .logo-e:hover img {
+  -webkit-transform: scale(30);
+          transform: scale(30);
+  border: 1px solid transparent;
+  -webkit-box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+          box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  opacity: 0;
 }
 
 .skills-grid .logo-f {
   grid-area: f;
-  width: 160px;
 }
 
 .skills-grid .logo-g {
   grid-area: g;
-  width: 160px;
 }
 
 .skills-grid .logo-h {
   grid-area: h;
-  width: 140px;
+}
+
+.skills-grid .logo-i {
+  grid-area: i;
 }
 
 .projects-section {

@@ -172,11 +172,11 @@ h2 {
 .skills-grid {
   grid-area: d;
   grid-template:
-    " . heading heading heading heading . " 100px
-    " a a b b c c " 1fr
-    " d d e e f f " 1fr
-    " . g g h h . " 1fr
-    / 1fr 1fr 1fr 1fr 1fr 1fr;
+    " heading heading heading " 100px
+    " a b c " 1fr
+    " d e f " 1fr
+    " g h i " 1fr
+    / 1fr 1fr 1fr;
   row-gap: 2rem;
 
   h2 {
@@ -187,51 +187,64 @@ h2 {
     display: flex;
     justify-self: center;
     align-items: center;
+    width: 9rem;
     img {
       width: 100%;
       padding: 1.5rem;
       border-radius: 2rem;
       border: 1px solid $bg-color-red;
-      background: $bg-color-white;
       transition: all 0.6s;
     }
-    img:hover {
-      background: $pure-white;
-      border: 1px solid transparent;
-      box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-    }
+    /* img:hover {
+    } */
+  }
+  .logo-a:hover img {
+    transform: skew(-30deg, 120deg);
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    opacity: 0;
   }
   .logo-a {
     grid-area: a;
-    width: 160px;
   }
   .logo-b {
     grid-area: b;
-    width: 220px;
   }
   .logo-c {
     grid-area: c;
-    width: 200px;
+  }
+  .logo-c:hover img {
+    transform: skew(-30deg, 120deg);
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    opacity: 0;
   }
   .logo-d {
     grid-area: d;
-    width: 180px;
   }
   .logo-e {
     grid-area: e;
-    width: 180px;
+  }
+  .logo-e:hover img {
+    transform: scale(30);
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    opacity: 0;
   }
   .logo-f {
     grid-area: f;
-    width: 160px;
   }
   .logo-g {
     grid-area: g;
-    width: 160px;
   }
   .logo-h {
     grid-area: h;
-    width: 140px;
+  }
+  .logo-i {
+    grid-area: i;
   }
 }
 // PROJECTS
