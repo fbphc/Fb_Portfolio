@@ -74,18 +74,18 @@ document.querySelectorAll(".disappear").forEach((item) => {
 
 
 document.querySelectorAll('.logo-box').forEach ((item) => {
-    item.addEventListener("mouseover", (event) => {
+    item.addEventListener("mousedown", (event) => {
     item.animate([
       { opacity: '0.7' },
-      { opacity: '0', transform: 'skew(-30deg, 180deg) scale(2)'}
+      { opacity: '0', transform: 'skew(-30deg, 180deg) scale(10)', cursor: 'pointer'}
     ], {
       // timing options
       duration: 400,
       iterations: 1
     });
-  
-    item.style.visibility = "hidden";
-    let x = setInterval(logoAppear, 1500, 'Parameter 1', 'Parameter 2'); 
+  item.style.opacity = "0";
+
+     let x = setInterval(logoAppear, 1500, 'Parameter 1', 'Parameter 2'); 
     function logoAppear(){
       item.animate([
         { opacity: '0', transform: 'scale(0) skew(60deg, -180deg) ' },
@@ -94,9 +94,9 @@ document.querySelectorAll('.logo-box').forEach ((item) => {
         // timing options
         duration: 400,
         iterations: 1
-      });
+      }) 
+      item.style.opacity = "1";
       clearInterval(x);
-      item.style.visibility = "visible";
-    }
-    });
+    };
+    }); 
   });

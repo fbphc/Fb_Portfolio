@@ -229,8 +229,6 @@ h2 {
   padding: 1.5rem;
   border-radius: 2rem;
   border: 1px solid #ff6f00;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .skills-grid .logo-a {
