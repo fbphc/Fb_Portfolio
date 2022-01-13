@@ -1145,7 +1145,7 @@ footer .socials a:hover {
 
 @media (max-width: 768px) {
   .section {
-    height: 60rem;
+    height: 66rem;
   }
   .navbar {
     display: none;
@@ -1176,12 +1176,6 @@ footer .socials a:hover {
   }
   .welcome h1 {
     font-size: 1.8rem;
-  }
-  .section {
-    height: 70rem;
-    padding: 0rem;
-    display: -ms-grid;
-    display: grid;
   }
   .card {
     width: 100%;
@@ -1233,10 +1227,10 @@ footer .socials a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 80%;
+    width: 6 0%;
   }
   .skills-grid .logo-box img {
-    width: 100%;
+    width: 80%;
     padding: 1rem;
     -webkit-box-shadow: 0px 29px 50px -15px rgba(255, 255, 255, 0.52);
     box-shadow: 0px 29px 50px -15px rgba(255, 255, 255, 0.52);
@@ -1255,6 +1249,9 @@ footer .socials a:hover {
 }
 
 @media (max-width: 480px) {
+  .section {
+    height: 66rem;
+  }
   main h2 {
     font-size: 1.8rem;
   }
@@ -1300,15 +1297,23 @@ footer .socials a:hover {
     font-size: 1.5rem;
     margin: 0.6rem 0;
   }
-  .about-grid .biography .paragraph .sub-paragraph p {
-    line-height: 1.4rem;
+  .about-grid {
+    grid-area: c;
+    grid-template: " heading " 100px " bio " 1fr " about-btn " 50px / 1fr;
+  }
+  .about-grid .about-grid .biography .paragraph .sub-paragraph p {
+    line-height: 1.2rem;
+  }
+  .about-grid .about-grid .about-btn {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .skills-grid {
     grid-area: d;
     gap: 0rem;
   }
   .skills-grid .logo-box {
-    width: 70%;
+    width: 80%;
     margin: 1rem 0rem;
   }
   .skills-grid .logo-box img {

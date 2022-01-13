@@ -9,7 +9,7 @@
 
 @media (max-width: 768px) {
   .section {
-    height: 60rem;
+    height: 66rem;
   }
   .navbar {
     display: none;
@@ -43,11 +43,6 @@
     }
   }
 
-  .section {
-    height: 70rem;
-    padding: 0rem;
-    display: grid;
-  }
   .card {
     width: 100%;
     padding: 0;
@@ -123,9 +118,9 @@
 
     .logo-box {
       justify-content: center;
-      width: 80%;
+      width: 6 0%;
       img {
-        width: 100%;
+        width: 80%;
         padding: 1rem;
         -webkit-box-shadow: 0px 29px 50px -15px rgba(255, 255, 255, 0.52);
         box-shadow: 0px 29px 50px -15px rgba(255, 255, 255, 0.52);
@@ -157,6 +152,9 @@
 }
 
 @media (max-width: 480px) {
+  .section {
+    height: 66rem;
+  }
   main h2 {
     font-size: 1.8rem;
   }
@@ -208,37 +206,47 @@
       }
     }
   }
-
   .about-grid {
-    .biography .paragraph .sub-paragraph p {
-      line-height: 1.4rem;
-    }
-  }
-  .skills-grid {
-    grid-area: d;
-    gap: 0rem;
-    .logo-box {
-      width: 70%;
-      margin: 1rem 0rem;
-      img {
-        width: 99%;
-        border: 1px solid $bg-color-red;
-        padding: 1rem 0.2rem;
-
-        border-radius: 0.5rem;
+    grid-area: c;
+    grid-template:
+      " heading " 100px
+      " bio " 1fr
+      " about-btn " 50px
+      / 1fr;
+    .about-grid {
+      .biography .paragraph .sub-paragraph p {
+        line-height: 1.2rem;
+      }
+      .about-btn {
+        align-self: flex-start;
       }
     }
   }
-  .form-grid {
-    width: 80%;
-    font-size: 0.6rem;
-  }
-  footer {
-    .copyright {
-      font-size: 0.8rem;
+    .skills-grid {
+      grid-area: d;
+      gap: 0rem;
+      .logo-box {
+        width: 80%;
+        margin: 1rem 0rem;
+        img {
+          width: 99%;
+          border: 1px solid $bg-color-red;
+          padding: 1rem 0.2rem;
+
+          border-radius: 0.5rem;
+        }
+      }
     }
-    .socials a {
-      margin-right: 0.3rem;
+    .form-grid {
+      width: 80%;
+      font-size: 0.6rem;
+    }
+    footer {
+      .copyright {
+        font-size: 0.8rem;
+      }
+      .socials a {
+        margin-right: 0.3rem;
+      }
     }
   }
-}
