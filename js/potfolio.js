@@ -72,12 +72,16 @@ document.querySelectorAll(".disappear").forEach((item) => {
   });
 });
 
-
 document.querySelectorAll('.logo-box').forEach ((item) => {
-    item.addEventListener("mousedown", (event) => {
+  item.addEventListener('mouseover', (event) => {
+    item.style.cursor = 'pointer';
+  })
+});
+document.querySelectorAll('.logo-box').forEach ((item) => {
+    item.addEventListener("click", (event) => {
     item.animate([
       { opacity: '0.7' },
-      { opacity: '0', transform: 'skew(-30deg, 180deg) scale(10)', cursor: 'pointer'}
+      { opacity: '0', transform: 'skew(-30deg, 180deg) scale(2)'}
     ], {
       // timing options
       duration: 400,

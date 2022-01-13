@@ -194,6 +194,8 @@ h2 {
 
 .git-link .qr-code:hover {
   opacity: 1;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0px 15px 25px, rgba(255, 255, 255, 0.15) 0px 5px 10px;
+          box-shadow: rgba(255, 255, 255, 0.15) 0px 15px 25px, rgba(255, 255, 255, 0.15) 0px 5px 10px;
 }
 
 .skills-section {
@@ -229,6 +231,13 @@ h2 {
   padding: 1.5rem;
   border-radius: 2rem;
   border: 1px solid #ff6f00;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.skills-grid .logo-box img:hover {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0px 54px 55px, rgba(255, 255, 255, 0.15) 0px -12px 30px, rgba(255, 255, 255, 0.15) 0px 4px 6px, rgba(255, 255, 255, 0.15) 0px 12px 13px, rgba(255, 255, 255, 0.15) 0px -3px 5px;
+          box-shadow: rgba(255, 255, 255, 0.15) 0px 54px 55px, rgba(255, 255, 255, 0.15) 0px -12px 30px, rgba(255, 255, 255, 0.15) 0px 4px 6px, rgba(255, 255, 255, 0.15) 0px 12px 13px, rgba(255, 255, 255, 0.15) 0px -3px 5px;
 }
 
 .skills-grid .logo-a {
@@ -1135,6 +1144,9 @@ footer .socials a:hover {
 }
 
 @media (max-width: 768px) {
+  .section {
+    height: 60rem;
+  }
   .navbar {
     display: none;
   }
@@ -1167,7 +1179,7 @@ footer .socials a:hover {
   }
   .section {
     height: 70rem;
-    padding: 0 2rem;
+    padding: 0rem;
     display: -ms-grid;
     display: grid;
   }
@@ -1221,14 +1233,13 @@ footer .socials a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 80%;
   }
   .skills-grid .logo-box img {
-    width: 80%;
+    width: 100%;
     padding: 1rem;
-    background: white;
-  }
-  .skills-grid .logo-box img:hover {
-    background: rgba(238, 238, 238, 0.782);
+    -webkit-box-shadow: 0px 29px 50px -15px rgba(255, 255, 255, 0.52);
+    box-shadow: 0px 29px 50px -15px rgba(255, 255, 255, 0.52);
   }
   .projects-section .projects-grid {
     grid-template: " a a b b " 1fr " a a b b" 1fr " c c e e " 1fr " d d e e " 1fr / 1fr 1fr 1fr 1fr;
@@ -1294,11 +1305,17 @@ footer .socials a:hover {
   }
   .skills-grid {
     grid-area: d;
-    grid-template: " heading heading heading heading " 100px " a a b b " 1fr " c c d d " 1fr " e e f f " 1fr " g g h h " 1fr / 1fr 1fr 1fr 1fr;
-    row-gap: 2rem;
+    gap: 0rem;
+  }
+  .skills-grid .logo-box {
+    width: 70%;
+    margin: 1rem 0rem;
   }
   .skills-grid .logo-box img {
-    width: 60%;
+    width: 99%;
+    border: 1px solid #ff6f00;
+    padding: 1rem 0.2rem;
+    border-radius: 0.5rem;
   }
   footer .copyright {
     font-size: 0.8rem;
