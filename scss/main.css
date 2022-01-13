@@ -221,8 +221,6 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   width: 9rem;
-  /* img:hover {
-    } */
 }
 
 .skills-grid .logo-box img {
@@ -230,18 +228,8 @@ h2 {
   padding: 1.5rem;
   border-radius: 2rem;
   border: 1px solid #ff6f00;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-.skills-grid .logo-a:hover img {
-  -webkit-transform: skew(-30deg, 120deg);
-          transform: skew(-30deg, 120deg);
-  border: 1px solid transparent;
-  -webkit-box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-          box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .skills-grid .logo-a {
@@ -256,32 +244,12 @@ h2 {
   grid-area: c;
 }
 
-.skills-grid .logo-c:hover img {
-  -webkit-transform: skew(-30deg, 120deg);
-          transform: skew(-30deg, 120deg);
-  border: 1px solid transparent;
-  -webkit-box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-          box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  opacity: 0;
-}
-
 .skills-grid .logo-d {
   grid-area: d;
 }
 
 .skills-grid .logo-e {
   grid-area: e;
-}
-
-.skills-grid .logo-e:hover img {
-  -webkit-transform: scale(30);
-          transform: scale(30);
-  border: 1px solid transparent;
-  -webkit-box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-          box-shadow: 1px 1px 50px 12px rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  opacity: 0;
 }
 
 .skills-grid .logo-f {
@@ -1232,7 +1200,7 @@ footer .socials a:hover {
   }
   .about-grid .biography .paragraph .sub-paragraph p {
     line-height: 1.8rem;
-    color: red;
+    color: #ff6f00;
   }
   .appear {
     display: block;

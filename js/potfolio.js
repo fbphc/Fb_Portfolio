@@ -9,12 +9,12 @@ function animationText(words, id, color) {
   let letterCount = 1;
   let x = 1;
   let waiting = false;
-  const target = document.getElementById(id);
-  target.setAttribute("style", "color:" + color);
+  const heading = document.getElementById(id);
+  heading.setAttribute("style", "color:" + color);
   window.setInterval(function () {
     if (letterCount === 0 && waiting === false) {
       waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount);
+      heading.innerHTML = words[0].substring(0, letterCount);
       window.setTimeout(function () {
         var usedWord = words.shift();
         words.push(usedWord);
@@ -30,7 +30,7 @@ function animationText(words, id, color) {
         waiting = false;
       }, 1000);
     } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount);
+      heading.innerHTML = words[0].substring(0, letterCount);
       letterCount += x;
     }
   }, 100);
@@ -68,3 +68,36 @@ document.querySelectorAll(".disappear").forEach((item) => {
     document.querySelector(".disappear").style.display = "none";
   });
 });
+
+
+document.querySelectorAll('.logo-box').forEach ((item) => {
+  item.addEventListener("mouseover", (event) => {
+  item.animate([
+    { opacity: '0.7' },
+    { opacity: '0', transform: 'skew(-30deg, 180deg) scale(2)'}
+  ], {
+    // timing options
+    duration: 500,
+    iterations: 1
+  });
+
+  item.style.visibility = "hidden";
+  let x = setInterval(logoAppear, 1500, 'Parameter 1', 'Parameter 2'); 
+  function logoAppear(){
+    item.animate([
+      { opacity: '0', transform: 'scale(0) skew(60deg, -180deg) ' },
+      { opacity: '1',}
+    ], {
+      // timing options
+      duration: 500,
+      iterations: 1
+    });
+    clearInterval(x);
+    item.style.visibility = "visible";
+  }
+ 
+  });
+  
+});
+/* console.log(logoSkills); */
+
