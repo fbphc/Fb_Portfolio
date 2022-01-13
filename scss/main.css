@@ -5,6 +5,7 @@
           box-sizing: border-box;
 }
 
+/*  */
 /* --- COLORS --- */
 /* --- FONTS --- */
 :root {
@@ -1200,7 +1201,6 @@ footer .socials a:hover {
   }
   .about-grid .biography .paragraph .sub-paragraph p {
     line-height: 1.8rem;
-    color: #ff6f00;
   }
   .appear {
     display: block;

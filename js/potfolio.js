@@ -36,20 +36,23 @@ function animationText(words, id, color) {
   }, 100);
 }
 
-function trigger() {
-  let x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+const trigger = document.querySelector('.trigger');
+trigger.addEventListener('click', function(){
+  const bars = document.querySelector('.myLinks');
+  if (bars.style.display === "block") {
+    bars.style.display = "none";
   } else {
-    x.style.display = "block";
+    bars.style.display = "block";
   }
-}
+})
 
-document.querySelectorAll(".mouseEvent").forEach((item) => {
+document.querySelectorAll(".sub-myLinks").forEach((item) => {
   item.addEventListener("click", (event) => {
     document.getElementById("myLinks").style.display = "none";
   });
 });
+
+
 
 document.querySelectorAll(".appear").forEach((item) => {
   item.addEventListener("click", (event) => {
@@ -71,33 +74,29 @@ document.querySelectorAll(".disappear").forEach((item) => {
 
 
 document.querySelectorAll('.logo-box').forEach ((item) => {
-  item.addEventListener("mouseover", (event) => {
-  item.animate([
-    { opacity: '0.7' },
-    { opacity: '0', transform: 'skew(-30deg, 180deg) scale(2)'}
-  ], {
-    // timing options
-    duration: 500,
-    iterations: 1
-  });
-
-  item.style.visibility = "hidden";
-  let x = setInterval(logoAppear, 1500, 'Parameter 1', 'Parameter 2'); 
-  function logoAppear(){
+    item.addEventListener("mouseover", (event) => {
     item.animate([
-      { opacity: '0', transform: 'scale(0) skew(60deg, -180deg) ' },
-      { opacity: '1',}
+      { opacity: '0.7' },
+      { opacity: '0', transform: 'skew(-30deg, 180deg) scale(2)'}
     ], {
       // timing options
-      duration: 500,
+      duration: 400,
       iterations: 1
     });
-    clearInterval(x);
-    item.style.visibility = "visible";
-  }
- 
-  });
   
-});
-/* console.log(logoSkills); */
-
+    item.style.visibility = "hidden";
+    let x = setInterval(logoAppear, 1500, 'Parameter 1', 'Parameter 2'); 
+    function logoAppear(){
+      item.animate([
+        { opacity: '0', transform: 'scale(0) skew(60deg, -180deg) ' },
+        { opacity: '1',}
+      ], {
+        // timing options
+        duration: 400,
+        iterations: 1
+      });
+      clearInterval(x);
+      item.style.visibility = "visible";
+    }
+    });
+  });
