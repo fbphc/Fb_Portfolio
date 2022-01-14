@@ -81,7 +81,7 @@ document.querySelectorAll('.logo-box').forEach ((item) => {
     item.addEventListener("click", (event) => {
     item.animate([
       { opacity: '0.7' },
-      { opacity: '0', transform: 'skew(-30deg, 180deg) scale(2)'}
+      { opacity: '0', transform: 'skew(20deg, 180deg)'}
     ], {
       // timing options
       duration: 400,
@@ -92,7 +92,7 @@ document.querySelectorAll('.logo-box').forEach ((item) => {
      let x = setInterval(logoAppear, 1500, 'Parameter 1', 'Parameter 2'); 
     function logoAppear(){
       item.animate([
-        { opacity: '0', transform: 'scale(0) skew(60deg, -180deg) ' },
+        { opacity: '0', transform: 'skew(60deg, -180deg) ' },
         { opacity: '1',}
       ], {
         // timing options
