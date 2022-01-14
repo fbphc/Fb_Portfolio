@@ -1227,7 +1227,7 @@ footer .socials a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 8rem;
+    width: 6rem;
   }
   .skills-grid .logo-box img {
     width: 80%;
