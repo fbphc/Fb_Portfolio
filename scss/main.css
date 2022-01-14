@@ -1249,8 +1249,11 @@ footer .socials a:hover {
 }
 
 @media (max-width: 480px) {
-  .section.grid-one {
-    padding: 0rem;
+  /* .section.about-grid, .section.skills-grid, .section.projects-grid, .section.form-grid {
+    padding: 0rem 0rem;
+  } */
+  .section {
+    padding: 0rem 0rem;
   }
   main h2 {
     font-size: 1.8rem;
