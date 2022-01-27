@@ -45,7 +45,6 @@ trigger.addEventListener('click', function(){
     bars.style.display = "block";
   }
 })
-
 document.querySelectorAll(".sub-myLinks").forEach((item) => {
   item.addEventListener("click", (event) => {
     document.getElementById("myLinks").style.display = "none";
@@ -54,14 +53,16 @@ document.querySelectorAll(".sub-myLinks").forEach((item) => {
 
 
 
-document.querySelectorAll(".appear").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    document.querySelector(".par-text-1").style.display = "none";
-    document.querySelector(".par-text-2").style.display = "block";
-    document.querySelector(".appear").style.display = "none";
-    document.querySelector(".disappear").style.display = "block";
-  });
+let appear = document.querySelector(".fa-chevron-down");
+appear.addEventListener("click", (event) => {
+
+document.querySelector(".par-text-1").style.display = "none";
+  document.querySelector(".par-text-2").style.display = "block";
+  document.querySelector(".appear").style.display = "none";
+  document.querySelector(".disappear").style.display = "block";
 });
+;
+
 
 document.querySelectorAll(".disappear").forEach((item) => {
   item.addEventListener("click", (event) => {
@@ -103,4 +104,7 @@ document.querySelectorAll('.logo-box').forEach ((item) => {
       clearInterval(x);
     };
     }); 
+  });
+  document.querySelector('.box5').addEventListener('click',(event) => {
+    const myWindow = window.open("https://fbphc.github.io/Rock_Paper_Scissors/", "", "left = 300, top = 50, width=630, height=804, resizable=0");
   });
