@@ -106,5 +106,6 @@ document.querySelectorAll('.logo-box').forEach ((item) => {
     }); 
   });
   document.querySelector('.box5').addEventListener('click',(event) => {
-    const myWindow = window.open("https://fbphc.github.io/Rock_Paper_Scissors/", "", "left = 300, top = 50, width=630, height=804, resizable=0");
+    const myWindow = window.open("https://fbphc.github.io/Rock_Paper_Scissors/", "", "left = 300, top = 50, width=630, height=804, location=no, menubar=no, scrollbars=no, resizable=no, fullscreen=no");
   });
+  //width=700,location=no,menubar=no,height=500,scrollbars=no,resizable=no,fullscreen=no'
