@@ -73,6 +73,7 @@ document.querySelectorAll(".disappear").forEach((item) => {
   });
 });
 
+
 document.querySelectorAll('.logo-box').forEach ((item) => {
   item.addEventListener('mouseover', (event) => {
     item.style.cursor = 'pointer';
